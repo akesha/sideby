@@ -333,6 +333,151 @@
     margin: 24px 0 0;
   }
 
+  /* Curator sign-in widget */
+  .curator-signin {
+    display: flex; align-items: center; gap: 12px;
+    margin-top: 20px;
+    font-family: var(--sans);
+    font-size: 13px;
+    flex-wrap: wrap;
+  }
+  .curator-signin button, .signin-form button {
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    color: var(--ink-soft);
+    padding: 8px 14px; border-radius: 4px;
+    cursor: pointer; font: inherit;
+    transition: color .15s ease, border-color .15s ease;
+  }
+  .curator-signin button:hover, .signin-form button:hover {
+    color: var(--ink); border-color: var(--ink);
+  }
+  .curator-signin .signin-label {
+    color: var(--ink-muted);
+  }
+  .curator-signin .signed-in-name {
+    color: var(--ink); font-weight: 600;
+  }
+  .signin-form { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+  .signin-form select, .signin-form input {
+    padding: 8px 10px; border: 1px solid var(--rule); border-radius: 4px;
+    font: inherit; background: var(--paper); color: var(--ink);
+  }
+  .signin-error { color: #b3261e; font-size: 12px; }
+
+  /* Editor card (replaces an essay slot when its curator is signed in) */
+  .essay--editing {
+    background: var(--accent-tint);
+    border-radius: 12px;
+    padding: 40px;
+    border-top: 0;
+  }
+  .essay--editing::before { display: none; }
+  @media (max-width: 600px) { .essay--editing { padding: 28px 22px; } }
+
+  .editor { margin-top: 32px; }
+  .editor-field { display: block; margin-bottom: 18px; }
+  .editor-field > span {
+    display: block; font-family: var(--sans);
+    font-size: 11px; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--accent); font-weight: 600; margin-bottom: 6px;
+  }
+  .editor-field input, .editor-field textarea {
+    width: 100%; padding: 12px 14px; font: inherit;
+    font-family: var(--serif); font-size: 17px;
+    border: 1px solid var(--rule); border-radius: 6px;
+    background: var(--paper); color: var(--ink);
+    line-height: 1.5; box-sizing: border-box;
+  }
+  .editor-field textarea {
+    resize: vertical; min-height: 320px;
+    font-size: 16px; line-height: 1.65;
+  }
+  .editor-field input:focus, .editor-field textarea:focus {
+    outline: 2px solid var(--accent); outline-offset: 0;
+    border-color: var(--accent);
+  }
+  .editor-hints {
+    font-family: var(--sans); font-size: 13px; color: var(--ink-soft);
+    background: var(--paper); padding: 12px 16px; border-radius: 6px; margin: 12px 0;
+  }
+  .editor-hints summary { cursor: pointer; font-weight: 600; color: var(--ink); }
+  .editor-hints ul { margin: 10px 0 0; padding: 0 0 0 20px; line-height: 1.7; }
+  .editor-hints code {
+    background: var(--bg); padding: 1px 5px; border-radius: 3px;
+    font-size: 12px; font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  }
+  .editor-actions { display: flex; gap: 10px; flex-wrap: wrap; margin: 18px 0 8px; }
+  .editor-actions button {
+    padding: 10px 18px; border: 1px solid var(--ink);
+    background: var(--paper); color: var(--ink);
+    border-radius: 4px; cursor: pointer; font: inherit;
+    font-family: var(--sans); font-size: 14px;
+    transition: opacity .15s ease;
+  }
+  .editor-actions button.primary {
+    background: var(--accent); color: var(--paper); border-color: var(--accent);
+  }
+  .editor-actions button:hover { opacity: 0.85; }
+  .editor-status { font-family: var(--sans); font-size: 13px; min-height: 18px; margin-top: 6px; }
+  .editor-status--ok { color: var(--accent); font-weight: 500; }
+  .editor-status--err { color: #b3261e; }
+  .editor-preview-wrap {
+    margin-top: 20px; padding: 28px;
+    background: var(--paper);
+    border-radius: 8px;
+    border: 1px dashed var(--rule);
+  }
+  .editor-preview-label {
+    font-family: var(--sans); font-size: 11px; letter-spacing: .14em;
+    text-transform: uppercase; color: var(--ink-muted); margin: 0 0 16px;
+  }
+
+  /* Rendered markdown content (used for published essays + previews) */
+  .essay-body {
+    font-family: var(--serif);
+    font-size: 19px;
+    line-height: 1.7;
+    color: var(--ink);
+  }
+  .essay-body p { margin: 0 0 24px; }
+  .essay-body h2,
+  .essay-body h3,
+  .essay-body h4 {
+    font-family: var(--serif); font-weight: 500;
+    font-size: 22px; line-height: 1.25; letter-spacing: -0.005em;
+    color: var(--ink);
+    margin: 40px 0 16px;
+    padding-left: 18px;
+    border-left: 3px solid var(--accent);
+  }
+  .essay-body blockquote {
+    font-family: var(--serif); font-style: italic;
+    color: var(--accent);
+    font-size: clamp(20px, 2.6vw, 24px);
+    line-height: 1.4;
+    margin: 36px 0;
+    padding: 0 0 0 24px;
+    border-left: 3px solid var(--accent);
+  }
+  .essay-body blockquote p { margin: 0 0 10px; color: var(--accent); }
+  .essay-body blockquote p:last-child { margin-bottom: 0; }
+  .essay-body ol, .essay-body ul { margin: 20px 0 24px; padding-left: 24px; }
+  .essay-body li { margin: 0 0 12px; }
+  .essay-body strong { font-weight: 600; }
+  .essay-body em { font-style: italic; }
+  .essay-body a {
+    color: var(--accent); text-decoration: underline;
+    text-decoration-thickness: 1px; text-underline-offset: 3px;
+  }
+  .essay-body hr { border: 0; border-top: 1px solid var(--rule); margin: 40px 0; }
+  /* Drop cap on first paragraph of body */
+  .essay-body > p:first-of-type::first-letter {
+    font-family: var(--serif); font-weight: 500;
+    float: left; font-size: 64px; line-height: 0.9;
+    margin: 6px 10px 0 0; color: var(--accent);
+  }
+
   /* Footer */
   .site-footer {
     border-top: 1px solid var(--rule);
@@ -372,12 +517,13 @@
     <span><b>Three afterwords.</b> One published, two on the way.</span>
     <span><b>Reading time</b> · 12–15 minutes for what's here.</span>
   </div>
+  <div class="curator-signin" id="curator-signin"></div>
 </div>
 
 <div class="essays">
 
   <!-- Akesha — published -->
-  <article class="essay essay--akesha">
+  <article class="essay essay--akesha" id="aw-akesha">
     <header class="essay-head">
       <div class="avatar" aria-hidden="true">AH</div>
       <div>
@@ -465,7 +611,7 @@
   </article>
 
   <!-- Yousuf — pending -->
-  <article class="essay essay--yousuf essay-pending">
+  <article class="essay essay--yousuf essay-pending" id="aw-yousuf">
     <header class="essay-head">
       <div class="avatar" aria-hidden="true">YM</div>
       <div>
@@ -478,7 +624,7 @@
   </article>
 
   <!-- Anne — pending -->
-  <article class="essay essay--anne essay-pending">
+  <article class="essay essay--anne essay-pending" id="aw-anne">
     <header class="essay-head">
       <div class="avatar" aria-hidden="true">AF</div>
       <div>
@@ -498,6 +644,240 @@
     <span><a href="index.html">All materials</a></span>
   </div>
 </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js"></script>
+<script>
+(() => {
+  const SUPABASE_URL = "https://tfskwfnbelhpidybilcd.supabase.co";
+  const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRmc2t3Zm5iZWxocGlkeWJpbGNkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzg0MjA5MzgsImV4cCI6MjA5Mzk5NjkzOH0.o5Vmmy0PX9zEs7VCVYqaLP4bZ29KnNQjUgngboyaFDs";
+  const SESSION_KEY = "afterwords_session_v1";
+
+  const sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+  marked.setOptions({ breaks: false, gfm: true });
+
+  const PANELISTS = {
+    akesha: { name: "Akesha Horton, PhD", initials: "AH", role: "Director of Academic Engagement and Learning, Indiana University Bloomington", label: "Afterword 01" },
+    yousuf: { name: "Yousuf Marvi", initials: "YM", role: "Math Teacher and ELD Coach, Sierra Vista Middle School (Irvine USD)", label: "Afterword 02" },
+    anne:   { name: "Anne Fensie, PhD", initials: "AF", role: "Director, Center for Teaching and Learning, University of Maine at Presque Isle", label: "Afterword 03" }
+  };
+
+  let session = null;
+  try { session = JSON.parse(sessionStorage.getItem(SESSION_KEY) || "null"); } catch {}
+  let afterwords = [];
+
+  // Save the original (hard-coded) HTML for each slot so we can restore on sign-out
+  const slotDefaults = {};
+  for (const c of ["akesha", "yousuf", "anne"]) {
+    const el = document.getElementById("aw-" + c);
+    if (el) slotDefaults[c] = { html: el.innerHTML, className: el.className };
+  }
+
+  const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) =>
+    ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+
+  const renderMarkdown = (md) =>
+    DOMPurify.sanitize(marked.parse(md || ""), { USE_PROFILES: { html: true } });
+
+  async function init() {
+    const { data, error } = await sb.from("afterwords").select("*");
+    if (error) {
+      console.error("Failed to load afterwords:", error);
+      afterwords = [];
+    } else {
+      afterwords = data || [];
+    }
+    render();
+  }
+
+  function render() {
+    renderSigninWidget();
+    for (const curator of ["akesha", "yousuf", "anne"]) {
+      const slot = document.getElementById("aw-" + curator);
+      if (!slot) continue;
+      const aw = afterwords.find((a) => a.curator === curator);
+
+      if (session && session.curator === curator) {
+        renderEditor(slot, curator, aw);
+      } else if (aw && aw.status === "published") {
+        renderPublished(slot, curator, aw);
+      } else {
+        // Restore the original hard-coded default
+        slot.className = slotDefaults[curator].className;
+        slot.innerHTML = slotDefaults[curator].html;
+      }
+    }
+  }
+
+  function renderSigninWidget() {
+    const root = document.getElementById("curator-signin");
+    if (!root) return;
+    if (session) {
+      const p = PANELISTS[session.curator];
+      root.innerHTML =
+        '<span class="signin-label">Signed in as <span class="signed-in-name">' + esc(p.name) + '</span></span>' +
+        '<button type="button" id="signout-btn">Sign out</button>';
+      document.getElementById("signout-btn").onclick = signOut;
+    } else {
+      root.innerHTML = '<button type="button" id="signin-btn">Curator? Sign in →</button>';
+      document.getElementById("signin-btn").onclick = openSignin;
+    }
+  }
+
+  function openSignin() {
+    const root = document.getElementById("curator-signin");
+    root.innerHTML =
+      '<form id="signin-form" class="signin-form">' +
+        '<select id="si-curator" required aria-label="Curator">' +
+          '<option value="">Who are you?</option>' +
+          '<option value="akesha">Akesha</option>' +
+          '<option value="yousuf">Yousuf</option>' +
+          '<option value="anne">Anne</option>' +
+        '</select>' +
+        '<input type="password" id="si-passcode" placeholder="Passcode" required autocomplete="off" />' +
+        '<button type="submit">Sign in</button>' +
+        '<button type="button" id="si-cancel">Cancel</button>' +
+        '<span class="signin-error" id="si-error"></span>' +
+      '</form>';
+    document.getElementById("si-cancel").onclick = renderSigninWidget;
+    document.getElementById("signin-form").onsubmit = async (e) => {
+      e.preventDefault();
+      const curator = document.getElementById("si-curator").value;
+      const passcode = document.getElementById("si-passcode").value;
+      const errEl = document.getElementById("si-error");
+      errEl.textContent = "Checking...";
+      const { error } = await sb.rpc("verify_curator", { p_curator: curator, p_pass: passcode });
+      if (error) { errEl.textContent = "Invalid passcode."; return; }
+      session = { curator, passcode };
+      sessionStorage.setItem(SESSION_KEY, JSON.stringify(session));
+      await init();
+      document.getElementById("aw-" + curator)?.scrollIntoView({ behavior: "smooth", block: "start" });
+    };
+  }
+
+  function signOut() {
+    session = null;
+    sessionStorage.removeItem(SESSION_KEY);
+    render();
+  }
+
+  function renderPublished(slot, curator, aw) {
+    const p = PANELISTS[curator];
+    slot.className = "essay essay--" + curator;
+    slot.innerHTML =
+      '<header class="essay-head">' +
+        '<div class="avatar" aria-hidden="true">' + esc(p.initials) + '</div>' +
+        '<div>' +
+          '<p class="essay-byline-eyebrow">' + esc(p.label) + ' · Published</p>' +
+          '<h2 class="essay-name">' + esc(p.name) + '</h2>' +
+          '<p class="essay-role">' + esc(p.role) + '</p>' +
+        '</div>' +
+      '</header>' +
+      (aw.title ? '<h3 class="essay-title">' + esc(aw.title) + '</h3>' : '') +
+      (aw.deck ? '<p class="essay-deck">' + esc(aw.deck) + '</p>' : '') +
+      '<div class="essay-body">' + renderMarkdown(aw.body_md) + '</div>';
+  }
+
+  function renderEditor(slot, curator, aw) {
+    const p = PANELISTS[curator];
+    const cur = aw || { title: "", deck: "", body_md: "", status: "pending" };
+    slot.className = "essay essay--" + curator + " essay--editing";
+    slot.innerHTML =
+      '<header class="essay-head">' +
+        '<div class="avatar" aria-hidden="true">' + esc(p.initials) + '</div>' +
+        '<div>' +
+          '<p class="essay-byline-eyebrow">' + esc(p.label) + ' · ' + (cur.status === "published" ? "Editing (live)" : "Editing (draft)") + '</p>' +
+          '<h2 class="essay-name">' + esc(p.name) + '</h2>' +
+          '<p class="essay-role">' + esc(p.role) + '</p>' +
+        '</div>' +
+      '</header>' +
+      '<div class="editor">' +
+        '<label class="editor-field">' +
+          '<span>Title</span>' +
+          '<input type="text" id="ed-title" placeholder="The headline of your piece" value="' + esc(cur.title || "") + '" />' +
+        '</label>' +
+        '<label class="editor-field">' +
+          '<span>Subtitle (italic, optional)</span>' +
+          '<input type="text" id="ed-deck" placeholder="A one-line subhead" value="' + esc(cur.deck || "") + '" />' +
+        '</label>' +
+        '<label class="editor-field">' +
+          '<span>Body</span>' +
+          '<textarea id="ed-body" rows="18" placeholder="Write the part of the panel you didn\'t get to. Plain text is fine. See the formatting hints below for headings, pull-quotes, and lists.">' + esc(cur.body_md || "") + '</textarea>' +
+        '</label>' +
+        '<details class="editor-hints">' +
+          '<summary>Formatting cheat sheet</summary>' +
+          '<ul>' +
+            '<li>Blank line between paragraphs</li>' +
+            '<li><code>## Heading text</code> — a section heading</li>' +
+            '<li><code>&gt; Quote text</code> — a pull-quote (will appear large and italic)</li>' +
+            '<li><code>**bold**</code> and <code>_italic_</code></li>' +
+            '<li><code>1. item</code> — numbered list. <code>- item</code> — bulleted list.</li>' +
+            '<li>Plain URLs or <code>[text](url)</code> for links</li>' +
+          '</ul>' +
+        '</details>' +
+        '<div class="editor-actions">' +
+          '<button type="button" id="ed-preview">Preview</button>' +
+          '<button type="button" class="primary" id="ed-publish">' + (cur.status === "published" ? "Update published version" : "Publish") + '</button>' +
+          (cur.status === "published" ? '<button type="button" id="ed-unpublish">Unpublish</button>' : '') +
+        '</div>' +
+        '<div class="editor-status" id="ed-status"></div>' +
+        '<div class="editor-preview-wrap" id="ed-preview-wrap" hidden>' +
+          '<p class="editor-preview-label">Preview</p>' +
+          '<div class="essay-body" id="ed-preview-area"></div>' +
+        '</div>' +
+      '</div>';
+
+    document.getElementById("ed-preview").onclick = () => {
+      const wrap = document.getElementById("ed-preview-wrap");
+      const area = document.getElementById("ed-preview-area");
+      const body = document.getElementById("ed-body").value;
+      area.innerHTML = renderMarkdown(body);
+      wrap.hidden = !wrap.hidden;
+      if (!wrap.hidden) wrap.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    };
+
+    document.getElementById("ed-publish").onclick = async () => {
+      const title = document.getElementById("ed-title").value.trim();
+      const deck = document.getElementById("ed-deck").value.trim();
+      const body = document.getElementById("ed-body").value;
+      if (!title) { setStatus("A title is required.", "err"); return; }
+      if (!body.trim()) { setStatus("The body cannot be empty.", "err"); return; }
+      setStatus("Publishing…", "");
+      const { error } = await sb.rpc("upsert_afterword", {
+        p_curator: session.curator, p_pass: session.passcode,
+        p_title: title, p_deck: deck, p_body_md: body
+      });
+      if (error) { setStatus("Could not publish: " + error.message, "err"); return; }
+      setStatus("Published. Everyone can see it now.", "ok");
+      await init();
+    };
+
+    const unpubBtn = document.getElementById("ed-unpublish");
+    if (unpubBtn) {
+      unpubBtn.onclick = async () => {
+        if (!confirm("Hide your published afterword? You can republish later — your text stays saved.")) return;
+        setStatus("Unpublishing…", "");
+        const { error } = await sb.rpc("unpublish_afterword", {
+          p_curator: session.curator, p_pass: session.passcode
+        });
+        if (error) { setStatus("Could not unpublish: " + error.message, "err"); return; }
+        setStatus("Unpublished. Only you can see your draft now.", "ok");
+        await init();
+      };
+    }
+  }
+
+  function setStatus(msg, kind) {
+    const s = document.getElementById("ed-status");
+    if (!s) return;
+    s.textContent = msg;
+    s.className = "editor-status" + (kind ? " editor-status--" + kind : "");
+  }
+
+  init();
+})();
+</script>
 
 </body>
 </html>
