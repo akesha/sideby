@@ -67,9 +67,9 @@ function CommitScreen({ data, onChange }) {
   );
 }
 
-function ReadingScreen() {
+function ReadingInner() {
   return (
-    <div className="page page--narrow">
+    <>
       <div className="eyebrow">After</div>
       <h2 className="h-section">Reading list.</h2>
       <p className="body body--soft">
@@ -90,13 +90,13 @@ function ReadingScreen() {
           </div>
         ))}
       </div>
-    </div>
+    </>
   );
 }
 
-function FacilitateScreen() {
+function FacilitateInner() {
   return (
-    <div className="page page--narrow">
+    <>
       <div className="eyebrow">After</div>
       <h2 className="h-section">Facilitate this with your team.</h2>
       <p className="body body--soft">
@@ -128,11 +128,19 @@ function FacilitateScreen() {
           <strong style={{ fontFamily: "var(--font-display)" }}>Follow-up:</strong> schedule a 30-minute check-in 60 days out. Ask each participant which of their three commitments held, which slipped, and what they learned from the slips. The slips are the data.
         </p>
       </div>
-    </div>
+    </>
   );
 }
 
-function ExportScreen({ data }) {
+function ReadingScreen() {
+  return <div className="page page--narrow"><ReadingInner /></div>;
+}
+
+function FacilitateScreen() {
+  return <div className="page page--narrow"><FacilitateInner /></div>;
+}
+
+function ExportInner({ data }) {
   const has = (k) => data[k] && String(data[k]).trim().length > 0;
   const ans = (k) => has(k) ? <p className="ans">{data[k]}</p> : <p className="ans empty">— not yet written —</p>;
   const today = new Date().toLocaleDateString(undefined, { year: "numeric", month: "long", day: "numeric" });
@@ -146,7 +154,7 @@ function ExportScreen({ data }) {
   );
 
   return (
-    <div className="page page--narrow">
+    <>
       <div className="export-toolbar">
         <button className="export-btn" onClick={handlePrint}>↓ Print / save as PDF</button>
       </div>
@@ -219,8 +227,31 @@ function ExportScreen({ data }) {
           Built from a panel discussion hosted by Side By Side. Quotes lightly edited. The framings, prompts, and pathways are this workbook's contribution.
         </p>
       </div>
+    </>
+  );
+}
+
+function ExportScreen({ data }) {
+  return <div className="page page--narrow"><ExportInner data={data} /></div>;
+}
+
+function ResourcesScreen({ data }) {
+  return (
+    <div className="page page--narrow">
+      <div className="no-print">
+        <ReadingInner />
+        <hr className="hr" style={{ margin: "56px 0" }} />
+        <FacilitateInner />
+        <hr className="hr" style={{ margin: "56px 0" }} />
+        <div className="eyebrow" style={{ color: "var(--accent)" }}>Your copy</div>
+        <h2 className="h-section" style={{ marginTop: 8, marginBottom: 12 }}>Print or save as PDF.</h2>
+        <p className="body body--soft" style={{ marginBottom: 24 }}>
+          The button below prints just your responses — the reading list and facilitation notes above are not included.
+        </p>
+      </div>
+      <ExportInner data={data} />
     </div>
   );
 }
 
-Object.assign(window, { CommitScreen, ReadingScreen, FacilitateScreen, ExportScreen });
+Object.assign(window, { CommitScreen, ReadingScreen, FacilitateScreen, ExportScreen, ResourcesScreen });

@@ -1056,12 +1056,43 @@ body {
 /* Print */
 @media print {
   body { background: white !important; }
-  .topbar, .bottombar, .sponsor-strip, .twk-panel, .twk-toggle, .export-toolbar { display: none !important; }
+  .topbar, .bottombar, .sponsor-strip, .twk-panel, .twk-toggle, .export-toolbar, .no-print { display: none !important; }
   .shell { height: auto !important; display: block; }
   .main { overflow: visible !important; }
   .page-outer { position: static !important; overflow: visible !important; }
   .page { padding: 0 !important; max-width: none !important; animation: none !important; }
   .export-doc { box-shadow: none !important; border: 0 !important; padding: 0 !important; }
+}
+
+/* Tension group: stack multiple tensions on a single page */
+.tension-group {
+  display: flex;
+  flex-direction: column;
+}
+.tension-group .tension {
+  border-top: 1px solid var(--rule-soft);
+  padding-top: 56px;
+  margin-top: 56px;
+}
+.tension-group .tension:first-of-type {
+  border-top: 0;
+  padding-top: 0;
+  margin-top: 0;
+}
+.tension-group-preamble {
+  max-width: var(--w-text);
+  margin: 0 auto 48px;
+  padding: 0 32px;
+}
+
+/* Section preamble (folded section intro at top of a content page) */
+.section-preamble {
+  margin-bottom: 48px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--rule-soft);
+}
+.section-preamble .hr--short {
+  margin: 16px 0 20px;
 }
 
 /* Section divider with rule */

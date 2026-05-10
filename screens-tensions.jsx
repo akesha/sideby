@@ -39,6 +39,56 @@ function TensionScreen({ tension, data, onChange, vizStyle }) {
   );
 }
 
+function TensionGroupScreen({ tensions, data, onChange, vizStyle, preamble }) {
+  return (
+    <div className="page page--full">
+      <div className="tension-group">
+        {preamble && (
+          <div className="tension-group-preamble">
+            <SectionPreamble {...preamble} />
+          </div>
+        )}
+        {tensions.map((idx) => {
+          const t = window.TENSIONS[idx];
+          const valueKey = "tension." + t.id;
+          const whyKey = "tension." + t.id + ".why";
+          const value = data[valueKey];
+          const setValue = (v) => onChange(valueKey, v);
+          return (
+            <div className="tension" key={t.id}>
+              <div className="tension-eyebrow">
+                <span className="seq">{t.number} / 06</span>
+                <span>Tension</span>
+              </div>
+              <h2 className="tension-title">{t.title}</h2>
+              <p className="tension-intro">{t.intro}</p>
+              <TensionViz
+                style={vizStyle}
+                value={value}
+                onChange={setValue}
+                leftLabel={t.left}
+                rightLabel={t.right}
+                leftShort={t.leftShort}
+                rightShort={t.rightShort}
+              />
+              <div className="tension-why">
+                <Field
+                  id={whyKey}
+                  label="One sentence on why."
+                  placeholder={"“I don’t know” is allowed but it has to be earned."}
+                  rows={3}
+                  value={data[whyKey]}
+                  onChange={onChange}
+                />
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
 function ConstellationScreen({ data, onChange }) {
   const tensions = window.TENSIONS;
   const W = 700;
@@ -138,4 +188,4 @@ function ConstellationScreen({ data, onChange }) {
   );
 }
 
-Object.assign(window, { TensionScreen, ConstellationScreen });
+Object.assign(window, { TensionScreen, TensionGroupScreen, ConstellationScreen });

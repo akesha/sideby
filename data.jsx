@@ -494,27 +494,30 @@ const MODERATOR = {
 // Page sequence for navigation
 const PAGES = [
   { id: "cover", section: 0, kind: "cover" },
-  { id: "panel", section: 0, kind: "panel" },
-  { id: "how", section: 0, kind: "how" },
-  { id: "s1-intro", section: 1, kind: "section-intro", n: "Section 1", title: "What was said", body: "Three exchanges from the panel are below, each followed by a short reading prompt. Read the exchange first, then write your response. Do not skip the writing step. The writing is the work." },
-  { id: "ex1", section: 1, kind: "exchange", exchange: 0 },
+  { id: "about", section: 0, kind: "about" },
+  {
+    id: "ex1",
+    section: 1,
+    kind: "exchange",
+    exchange: 0,
+    preamble: { n: "Section 1", title: "What was said", body: "Three exchanges from the panel are below, each followed by a short reading prompt. Read the exchange first, then write your response. Do not skip the writing step. The writing is the work." }
+  },
   { id: "ex2", section: 1, kind: "exchange", exchange: 1 },
   { id: "ex3", section: 1, kind: "exchange", exchange: 2 },
-  { id: "s2-intro", section: 2, kind: "section-intro", n: "Section 2", title: "Where you stand", body: "The panel surfaced six tensions. They are real disagreements, not strawmen. For each one, mark where you sit on the continuum and write one sentence on why. \u201CI don\u2019t know\u201D is allowed but it has to be earned. If you mark the middle, your sentence should explain what you would need to know to commit." },
-  { id: "t1", section: 2, kind: "tension", tension: 0 },
-  { id: "t2", section: 2, kind: "tension", tension: 1 },
-  { id: "t3", section: 2, kind: "tension", tension: 2 },
-  { id: "t4", section: 2, kind: "tension", tension: 3 },
-  { id: "t5", section: 2, kind: "tension", tension: 4 },
-  { id: "t6", section: 2, kind: "tension", tension: 5 },
+  {
+    id: "tensions-a",
+    section: 2,
+    kind: "tension-group",
+    tensions: [0, 1, 2],
+    preamble: { n: "Section 2", title: "Where you stand", body: "The panel surfaced six tensions. They are real disagreements, not strawmen. For each one, mark where you sit on the continuum and write one sentence on why. \u201CI don\u2019t know\u201D is allowed but it has to be earned. If you mark the middle, your sentence should explain what you would need to know to commit." }
+  },
+  { id: "tensions-b", section: 2, kind: "tension-group", tensions: [3, 4, 5] },
   { id: "constellation", section: 2, kind: "constellation" },
   { id: "s3-intro", section: 3, kind: "pathway-pick" },
   { id: "pathway", section: 3, kind: "pathway-work" },
   { id: "s4-commit", section: 4, kind: "commit" },
   { id: "bonus", section: 5, kind: "bonus" },
-  { id: "reading", section: 5, kind: "reading" },
-  { id: "facilitate", section: 5, kind: "facilitate" },
-  { id: "export", section: 5, kind: "export" },
+  { id: "resources", section: 5, kind: "resources" },
 ];
 
 const SECTIONS = [

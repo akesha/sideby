@@ -46,9 +46,9 @@ function CoverScreen({ onBegin, hasProgress }) {
   );
 }
 
-function PanelScreen() {
+function PanelInner() {
   return (
-    <div className="page page--narrow">
+    <>
       <div className="eyebrow">The panel</div>
       <h2 className="h-section">Three educators learning, in public.</h2>
       <p className="lede">
@@ -78,13 +78,13 @@ function PanelScreen() {
           </div>
         ))}
       </div>
-    </div>
+    </>
   );
 }
 
-function HowScreen() {
+function HowInner() {
   return (
-    <div className="page page--narrow">
+    <>
       <div className="eyebrow">How to use this</div>
       <h2 className="h-section">Plan for sixty to seventy-five minutes.</h2>
       <p className="body body--soft">
@@ -117,6 +117,39 @@ function HowScreen() {
           The panelists do not agree on everything. That is the point. This workbook is not designed to convince you that AI is good or bad for teaching. It is designed to help you make a clear, defensible decision in your own context, with your own students, for your own reasons. If your honest answer to a prompt is <em>"I don't know yet,"</em> write that down. It is a real position.
         </p>
       </div>
+    </>
+  );
+}
+
+function PanelScreen() {
+  return <div className="page page--narrow"><PanelInner /></div>;
+}
+
+function HowScreen() {
+  return <div className="page page--narrow"><HowInner /></div>;
+}
+
+function AboutScreen() {
+  return (
+    <div className="page page--narrow">
+      <PanelInner />
+      <hr className="hr" style={{ margin: "56px 0" }} />
+      <HowInner />
+    </div>
+  );
+}
+
+function SectionPreamble({ n, title, body }) {
+  return (
+    <div className="section-preamble">
+      <div className="section-num">{n}</div>
+      <h2 className="h-section" style={{ fontSize: "clamp(32px, 4.4vw, 44px)", marginBottom: 20 }}>
+        {title}
+      </h2>
+      <hr className="hr--short" />
+      <p className="lede" style={{ fontSize: 18, fontStyle: "normal", color: "var(--ink)" }}>
+        {body}
+      </p>
     </div>
   );
 }
@@ -138,11 +171,12 @@ function SectionIntroScreen({ page }) {
   );
 }
 
-function ExchangeScreen({ exchange, data, onChange }) {
+function ExchangeScreen({ exchange, data, onChange, preamble }) {
   const ex = window.EXCHANGES[exchange];
   const panelistById = (id) => window.PANELISTS.find((p) => p.id === id);
   return (
     <div className="page page--narrow">
+      {preamble && <SectionPreamble {...preamble} />}
       <div className="eyebrow">Exchange {ex.number}</div>
       <h2 className="h-section">{ex.title}</h2>
       <p className="body body--soft">{ex.intro}</p>
@@ -172,4 +206,4 @@ function ExchangeScreen({ exchange, data, onChange }) {
   );
 }
 
-Object.assign(window, { CoverScreen, PanelScreen, HowScreen, SectionIntroScreen, ExchangeScreen });
+Object.assign(window, { CoverScreen, PanelScreen, HowScreen, AboutScreen, SectionIntroScreen, ExchangeScreen, SectionPreamble });

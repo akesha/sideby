@@ -51,12 +51,16 @@ function App() {
         return <PanelScreen />;
       case "how":
         return <HowScreen />;
+      case "about":
+        return <AboutScreen />;
       case "section-intro":
         return <SectionIntroScreen page={page} />;
       case "exchange":
-        return <ExchangeScreen exchange={page.exchange} data={data} onChange={update} />;
+        return <ExchangeScreen exchange={page.exchange} data={data} onChange={update} preamble={page.preamble} />;
       case "tension":
         return <TensionScreen tension={page.tension} data={data} onChange={update} vizStyle={t.tensionViz || "continuum"} />;
+      case "tension-group":
+        return <TensionGroupScreen tensions={page.tensions} data={data} onChange={update} vizStyle={t.tensionViz || "continuum"} preamble={page.preamble} />;
       case "constellation":
         return <ConstellationScreen data={data} onChange={update} />;
       case "pathway-pick":
@@ -73,6 +77,8 @@ function App() {
         return <FacilitateScreen />;
       case "export":
         return <ExportScreen data={data} />;
+      case "resources":
+        return <ResourcesScreen data={data} />;
       default:
         return <div>Unknown page</div>;
     }
@@ -87,9 +93,15 @@ function App() {
     if (p.kind === "cover") return "Cover";
     if (p.kind === "panel") return "The panel";
     if (p.kind === "how") return "How to use";
+    if (p.kind === "about") return "About this workbook";
     if (p.kind === "section-intro") return p.title;
     if (p.kind === "exchange") return "Exchange " + (p.exchange + 1);
     if (p.kind === "tension") return "Tension " + (p.tension + 1) + "/6";
+    if (p.kind === "tension-group") {
+      const first = p.tensions[0] + 1;
+      const last = p.tensions[p.tensions.length - 1] + 1;
+      return "Tensions " + first + "\u2013" + last + "/6";
+    }
     if (p.kind === "constellation") return "Your constellation";
     if (p.kind === "pathway-pick") return "Pick a pathway";
     if (p.kind === "pathway-work") {
@@ -101,6 +113,7 @@ function App() {
     if (p.kind === "reading") return "Reading list";
     if (p.kind === "facilitate") return "Facilitate";
     if (p.kind === "export") return "Your copy";
+    if (p.kind === "resources") return "Resources & your copy";
     return "";
   };
 
