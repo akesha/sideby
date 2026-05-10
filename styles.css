@@ -246,7 +246,11 @@ body {
 }
 .topbar .brand {
   display: flex; align-items: center; gap: 10px;
+  text-decoration: none;
+  color: inherit;
+  transition: opacity var(--t-fade);
 }
+.topbar a.brand:hover { opacity: 0.7; }
 .brand-mark {
   width: 18px; height: 18px; border-radius: 50%;
   background: var(--accent);

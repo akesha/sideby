@@ -36,6 +36,9 @@
   }
   .wrap { max-width: 1200px; margin: 0 auto; padding: 56px 28px 96px; }
   @media (max-width: 720px) { .wrap { padding: 36px 18px 72px; } }
+  .home-link { margin: 0 0 28px; font-family: var(--sans); font-size: 13px; letter-spacing: .04em; }
+  .home-link a { color: var(--ink-soft); text-decoration: none; border-bottom: 1px solid transparent; padding-bottom: 1px; transition: border-color .15s ease, color .15s ease; }
+  .home-link a:hover { color: var(--ink); border-bottom-color: var(--accent); }
 
   /* Header */
   .eyebrow {
@@ -511,6 +514,7 @@
 
 <div class="wrap">
 
+  <p class="home-link"><a href="index.html">← All materials</a></p>
   <p class="eyebrow" id="top">Reader interactive · panel responses</p>
   <h1 class="title">How three educators are actually learning AI</h1>
   <p class="subtitle">Four questions from a panel on AI in education. Three working answers from a faculty developer, an instructional designer, and an 8th grade math teacher. Pick whose framing resonates with you on each one.</p>

@@ -131,10 +131,10 @@ function App() {
       <div className="app-bg"></div>
       <div className="shell">
         <header className="topbar">
-          <div className="brand">
+          <a className="brand" href="index.html" aria-label="All materials">
             <div className="brand-mark"></div>
             <span className="brand-text">Teaching, Learning, and AI</span>
-          </div>
+          </a>
           <div className="progress">
             <span className="tabular">{String(pageIdx + 1).padStart(2, "0")} / {String(window.PAGES.length).padStart(2, "0")}</span>
             <div className="section-pips">{sectionPips}</div>
