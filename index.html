@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Teaching, Learning, and AI — panel materials</title>
+<meta name="description" content="A self-paced workbook, an interactive panel reading, and an open library on teaching and learning with AI." />
+<style>
+  :root {
+    --bg: #faf7f2;
+    --ink: #1d1f23;
+    --ink-soft: #4a4d54;
+    --ink-muted: #6e7079;
+    --rule: #d9d3c5;
+    --accent: #b85c2e;
+    --accent-soft: #f5e7dd;
+    --card: #fffdf9;
+    --card-border: #e8e1d1;
+    --shadow: 0 1px 0 rgba(0,0,0,.04), 0 6px 16px rgba(34,30,20,.06);
+    --serif: ui-serif, Georgia, "Iowan Old Style", "Cambria", serif;
+    --sans: ui-sans-serif, "Helvetica Neue", Arial, system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 80px 24px 64px;
+  }
+  h1 {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: clamp(28px, 4.4vw, 44px);
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    margin: 0 0 12px;
+  }
+  .lede {
+    font-family: var(--serif);
+    font-size: 19px;
+    color: var(--ink-soft);
+    margin: 0 0 40px;
+    max-width: 56ch;
+  }
+  .cards { display: grid; gap: 16px; }
+  a.card {
+    display: block;
+    background: var(--card);
+    border: 1px solid var(--card-border);
+    border-radius: 10px;
+    padding: 22px 24px;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: var(--shadow);
+    transition: transform .12s ease, border-color .12s ease;
+  }
+  a.card:hover {
+    border-color: var(--accent);
+    transform: translateY(-1px);
+  }
+  a.card h2 {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 22px;
+    margin: 0 0 6px;
+    color: var(--ink);
+  }
+  a.card p {
+    margin: 0;
+    color: var(--ink-soft);
+    font-size: 15.5px;
+  }
+  a.card .arrow {
+    color: var(--accent);
+    font-weight: 500;
+  }
+  footer {
+    margin-top: 56px;
+    padding-top: 20px;
+    border-top: 1px solid var(--rule);
+    color: var(--ink-muted);
+    font-size: 13.5px;
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Teaching, Learning, and AI</h1>
+    <p class="lede">Materials from a panel conversation among three educators on what it actually looks like to learn AI alongside our students.</p>
+
+    <div class="cards">
+      <a class="card" href="Teaching%20Learning%20and%20AI.html">
+        <h2>The Workbook <span class="arrow">→</span></h2>
+        <p>A self-paced walk through the four tensions, with prompts to apply them to your own teaching.</p>
+      </a>
+      <a class="card" href="Pick%20a%20Framing.html">
+        <h2>Pick a Framing <span class="arrow">→</span></h2>
+        <p>An interactive read of the panel — four questions, three working answers, your vote on whose framing resonates.</p>
+      </a>
+      <a class="card" href="Library.html">
+        <h2>The Library <span class="arrow">→</span></h2>
+        <p>An open shelf of readings, podcasts, substacks, and tools, curated by the panel.</p>
+      </a>
+    </div>
+
+    <footer>Akesha Horton · Yousuf Marvi · Anne Fensie</footer>
+  </div>
+</body>
+</html>
