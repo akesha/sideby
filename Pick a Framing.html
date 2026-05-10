@@ -36,9 +36,29 @@
   }
   .wrap { max-width: 1200px; margin: 0 auto; padding: 56px 28px 96px; }
   @media (max-width: 720px) { .wrap { padding: 36px 18px 72px; } }
-  .home-link { margin: 0 0 28px; font-family: var(--sans); font-size: 13px; letter-spacing: .04em; }
-  .home-link a { color: var(--ink-soft); text-decoration: none; border-bottom: 1px solid transparent; padding-bottom: 1px; transition: border-color .15s ease, color .15s ease; }
-  .home-link a:hover { color: var(--ink); border-bottom-color: var(--accent); }
+
+  /* Site nav */
+  .topnav {
+    background: #fffdf9;
+    border-bottom: 1px solid var(--rule);
+  }
+  .topnav-inner {
+    max-width: 1200px; margin: 0 auto; height: 56px;
+    padding: 0 28px;
+    display: flex; align-items: center; justify-content: space-between; gap: 18px;
+    font-size: 13px;
+    font-family: var(--sans);
+  }
+  @media (max-width: 720px) { .topnav-inner { padding: 0 18px; } }
+  .topnav-brand {
+    font-weight: 600;
+    color: var(--ink); text-decoration: none;
+    transition: opacity .15s ease;
+  }
+  a.topnav-brand:hover { opacity: 0.7; }
+  .topnav-links { display: flex; gap: 18px; color: var(--ink-soft); }
+  .topnav-links a { text-decoration: none; color: var(--ink-soft); border-bottom: 1px solid transparent; padding-bottom: 1px; transition: border-color .15s ease, color .15s ease; }
+  .topnav-links a:hover { color: var(--ink); border-bottom-color: var(--accent); }
 
   /* Header */
   .eyebrow {
@@ -246,7 +266,7 @@
     min-height: 18px;
   }
 
-  /* Progress bar at top */
+  /* Progress bar (sticks below the topnav) */
   .progress {
     position: sticky;
     top: 0;
@@ -255,9 +275,7 @@
     backdrop-filter: blur(6px);
     border-bottom: 1px solid var(--rule);
     padding: 10px 0;
-    margin: -56px -28px 32px;
   }
-  @media (max-width: 720px) { .progress { margin: -36px -18px 24px; } }
   .progress-inner {
     max-width: 1200px;
     margin: 0 auto;
@@ -503,6 +521,17 @@
 </head>
 <body>
 
+<div class="topnav">
+  <div class="topnav-inner">
+    <a class="topnav-brand" href="index.html" aria-label="All materials">Pick a Framing</a>
+    <nav class="topnav-links">
+      <a href="Teaching Learning and AI.html">Workbook</a>
+      <a href="Library.html">Library</a>
+      <a href="Afterwords.html">Afterwords</a>
+    </nav>
+  </div>
+</div>
+
 <div class="progress">
   <div class="progress-inner">
     <span class="progress-pill"><span class="dot-mini picks"></span><span id="picksCount">0</span> of 4 framings picked</span>
@@ -514,7 +543,6 @@
 
 <div class="wrap">
 
-  <p class="home-link"><a href="index.html">← All materials</a></p>
   <p class="eyebrow" id="top">Reader interactive · panel responses</p>
   <h1 class="title">How three educators are actually learning AI</h1>
   <p class="subtitle">Four questions from a panel on AI in education. Three working answers from a faculty developer, an instructional designer, and an 8th grade math teacher. Pick whose framing resonates with you on each one.</p>

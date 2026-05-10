@@ -133,8 +133,13 @@ function App() {
         <header className="topbar">
           <a className="brand" href="index.html" aria-label="All materials">
             <div className="brand-mark"></div>
-            <span className="brand-text">Teaching, Learning, and AI</span>
+            <span className="brand-text">The Workbook</span>
           </a>
+          <nav className="topbar-nav">
+            <a href="Pick a Framing.html">Framings</a>
+            <a href="Library.html">Library</a>
+            <a href="Afterwords.html">Afterwords</a>
+          </nav>
           <div className="progress">
             <span className="tabular">{String(pageIdx + 1).padStart(2, "0")} / {String(window.PAGES.length).padStart(2, "0")}</span>
             <div className="section-pips">{sectionPips}</div>
