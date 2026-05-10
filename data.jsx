@@ -516,7 +516,6 @@ const PAGES = [
   { id: "s3-intro", section: 3, kind: "pathway-pick" },
   { id: "pathway", section: 3, kind: "pathway-work" },
   { id: "s4-commit", section: 4, kind: "commit" },
-  { id: "bonus", section: 5, kind: "bonus" },
   { id: "resources", section: 5, kind: "resources" },
 ];
 

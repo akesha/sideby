@@ -1,0 +1,503 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Afterwords — what we didn't get to say on the panel</title>
+<meta name="description" content="The essays each panelist wrote after the conversation — the parts they didn't get to share on stage. From Akesha Horton, Yousuf Marvi, and Anne Fensie." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet" />
+
+<style>
+  :root {
+    --bg: #faf7f2;
+    --paper: #fffdf9;
+    --ink: #1d1f23;
+    --ink-soft: #4a4d54;
+    --ink-muted: #6e7079;
+    --rule: #d9d3c5;
+    --rule-soft: #ece6d6;
+    --highlight: #fbeec3;
+
+    --akesha: #b85c2e;
+    --akesha-soft: #f5e7dd;
+    --akesha-tint: #faf1ea;
+    --yousuf: #2e6e8a;
+    --yousuf-soft: #d9e8ee;
+    --yousuf-tint: #f0f5f7;
+    --anne:   #6f5d3a;
+    --anne-soft: #ece4d2;
+    --anne-tint: #f5efe2;
+
+    --serif: "Newsreader", ui-serif, Georgia, "Iowan Old Style", "Cambria", serif;
+    --sans:  "DM Sans", ui-sans-serif, "Helvetica Neue", Arial, system-ui, sans-serif;
+    --shadow: 0 1px 0 rgba(0,0,0,.04), 0 6px 16px rgba(34,30,20,.06);
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Top nav */
+  .topnav {
+    background: var(--paper);
+    border-bottom: 1px solid var(--rule);
+  }
+  .topnav-inner {
+    max-width: 1200px; margin: 0 auto; height: 56px;
+    padding: 0 28px;
+    display: flex; align-items: center; justify-content: space-between; gap: 18px;
+    font-size: 13px;
+  }
+  @media (max-width: 720px) { .topnav-inner { padding: 0 18px; } }
+  .topnav-brand {
+    font-weight: 600;
+    color: inherit; text-decoration: none;
+    transition: opacity .15s ease;
+  }
+  a.topnav-brand:hover { opacity: 0.7; }
+  .topnav-links { display: flex; gap: 18px; color: var(--ink-soft); }
+  .topnav-links a { text-decoration: none; color: var(--ink-soft); border-bottom: 1px solid transparent; padding-bottom: 1px; transition: border-color .15s ease, color .15s ease; }
+  .topnav-links a:hover { color: var(--ink); border-bottom-color: var(--akesha); }
+
+  /* Hero */
+  .hero {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 80px 28px 40px;
+  }
+  @media (max-width: 720px) { .hero { padding: 56px 20px 28px; } }
+  .eyebrow {
+    font-family: var(--sans);
+    font-size: 12px; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--akesha); font-weight: 600;
+    margin: 0 0 16px;
+  }
+  h1.hero-title {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(40px, 6.5vw, 68px);
+    line-height: 1.05;
+    letter-spacing: -0.015em;
+    margin: 0 0 18px;
+  }
+  h1.hero-title em { font-style: italic; color: var(--akesha); font-weight: 500; }
+  .hero-deck {
+    font-family: var(--serif);
+    font-size: clamp(18px, 2.4vw, 22px);
+    color: var(--ink-soft);
+    line-height: 1.5;
+    max-width: 56ch;
+    margin: 0;
+  }
+  .hero-meta {
+    margin-top: 32px;
+    display: flex; gap: 24px; flex-wrap: wrap;
+    font-family: var(--sans); font-size: 13px;
+    color: var(--ink-muted);
+    border-top: 1px solid var(--rule);
+    padding-top: 24px;
+  }
+  .hero-meta b { color: var(--ink); font-weight: 600; }
+
+  /* Essay container */
+  .essays {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 28px 96px;
+  }
+  @media (max-width: 720px) { .essays { padding: 0 20px 72px; } }
+
+  .essay {
+    margin-top: 64px;
+    padding: 48px 0 8px;
+    border-top: 1px solid var(--rule);
+    position: relative;
+  }
+  .essay::before {
+    content: ""; position: absolute; top: -1px; left: 0;
+    width: 80px; height: 3px;
+    background: var(--accent);
+  }
+  .essay--akesha { --accent: var(--akesha); --accent-soft: var(--akesha-soft); --accent-tint: var(--akesha-tint); }
+  .essay--yousuf { --accent: var(--yousuf); --accent-soft: var(--yousuf-soft); --accent-tint: var(--yousuf-tint); }
+  .essay--anne   { --accent: var(--anne);   --accent-soft: var(--anne-soft);   --accent-tint: var(--anne-tint); }
+
+  .essay-head {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 22px;
+    align-items: start;
+    margin-bottom: 32px;
+  }
+  @media (max-width: 600px) {
+    .essay-head { grid-template-columns: 64px 1fr; gap: 16px; }
+  }
+  .avatar {
+    width: 80px; height: 80px; border-radius: 50%;
+    background: var(--accent-soft);
+    color: var(--accent);
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--sans);
+    font-size: 22px; font-weight: 600;
+    letter-spacing: 0.02em;
+  }
+  @media (max-width: 600px) { .avatar { width: 64px; height: 64px; font-size: 18px; } }
+  .essay-byline-eyebrow {
+    font-family: var(--sans);
+    font-size: 11px; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--accent); font-weight: 600;
+    margin: 0 0 6px;
+  }
+  h2.essay-name {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: clamp(24px, 3.2vw, 28px);
+    margin: 0 0 4px;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+  }
+  .essay-role {
+    font-family: var(--sans);
+    font-size: 14px;
+    color: var(--ink-muted);
+    margin: 0;
+  }
+
+  h3.essay-title {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: clamp(28px, 3.8vw, 36px);
+    line-height: 1.18;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+    margin: 32px 0 12px;
+  }
+  .essay-deck {
+    font-family: var(--serif);
+    font-style: italic;
+    color: var(--ink-soft);
+    font-size: 17px;
+    margin: 0 0 40px;
+  }
+
+  /* Section within an essay */
+  .essay-section {
+    margin: 56px 0;
+  }
+  .essay-section:first-of-type { margin-top: 0; }
+  h4.essay-h {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 1.25;
+    letter-spacing: -0.005em;
+    color: var(--ink);
+    margin: 0 0 20px;
+    padding-left: 18px;
+    border-left: 3px solid var(--accent);
+  }
+
+  /* Body paragraphs */
+  .essay-section p,
+  .essay-pending-body {
+    font-family: var(--serif);
+    font-size: 19px;
+    line-height: 1.7;
+    color: var(--ink);
+    margin: 0 0 24px;
+  }
+  /* Drop cap on first paragraph of first section */
+  .essay-section:first-of-type > p:first-of-type::first-letter {
+    font-family: var(--serif);
+    font-weight: 500;
+    float: left;
+    font-size: 64px;
+    line-height: 0.9;
+    margin: 6px 10px 0 0;
+    color: var(--accent);
+  }
+
+  /* Pull quote (callout) */
+  .essay-callout {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(22px, 3vw, 28px);
+    line-height: 1.4;
+    color: var(--accent);
+    margin: 36px 0;
+    padding: 0 0 0 24px;
+    border-left: 3px solid var(--accent);
+  }
+  .essay-callout--single {
+    font-size: clamp(36px, 5vw, 48px);
+    line-height: 1.1;
+    text-align: center;
+    padding: 24px 0;
+    border-left: 0;
+    border-top: 1px solid var(--accent);
+    border-bottom: 1px solid var(--accent);
+  }
+
+  /* Numbered list */
+  .essay-list {
+    list-style: none; counter-reset: item; padding: 0; margin: 24px 0 32px;
+  }
+  .essay-list li {
+    counter-increment: item;
+    position: relative;
+    padding-left: 56px;
+    margin: 0 0 28px;
+    font-family: var(--serif);
+    font-size: 19px;
+    line-height: 1.65;
+  }
+  .essay-list li::before {
+    content: counter(item, decimal-leading-zero);
+    position: absolute; left: 0; top: 4px;
+    font-family: var(--sans);
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    color: var(--accent);
+    font-weight: 600;
+    background: var(--accent-soft);
+    padding: 4px 8px;
+    border-radius: 3px;
+  }
+  .essay-list-label {
+    font-weight: 600;
+    color: var(--ink);
+  }
+
+  /* Tagged items list ("for the next room") */
+  .essay-lines {
+    margin: 24px 0 32px; padding: 0;
+    background: var(--accent-tint);
+    border-radius: 8px;
+    padding: 24px 28px;
+  }
+  .essay-line {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 18px;
+    padding: 16px 0;
+    border-top: 1px solid var(--accent-soft);
+    margin: 0;
+  }
+  .essay-line:first-child { border-top: 0; padding-top: 4px; }
+  .essay-line:last-child { padding-bottom: 4px; }
+  @media (max-width: 600px) {
+    .essay-line { grid-template-columns: 1fr; gap: 6px; }
+  }
+  .essay-line dt {
+    font-family: var(--sans);
+    font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--accent); font-weight: 600;
+    padding-top: 4px;
+  }
+  .essay-line dd {
+    font-family: var(--serif);
+    font-size: 17px;
+    line-height: 1.6;
+    color: var(--ink);
+    margin: 0;
+  }
+
+  /* Pending placeholder essay */
+  .essay-pending {
+    background: var(--accent-tint);
+    border-radius: 12px;
+    padding: 40px;
+    margin-top: 64px;
+    border-top: 0;
+  }
+  .essay-pending::before { display: none; }
+  @media (max-width: 600px) { .essay-pending { padding: 28px 22px; } }
+  .essay-pending-eyebrow {
+    font-family: var(--sans);
+    font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--accent); font-weight: 600;
+    margin: 0 0 6px;
+  }
+  .essay-pending-body {
+    font-size: 18px;
+    color: var(--ink-soft);
+    margin: 24px 0 0;
+  }
+
+  /* Footer */
+  .site-footer {
+    border-top: 1px solid var(--rule);
+    background: var(--paper);
+    padding: 32px 28px;
+    margin-top: 32px;
+  }
+  .site-footer-inner {
+    max-width: 760px; margin: 0 auto;
+    font-family: var(--sans);
+    font-size: 13px;
+    color: var(--ink-muted);
+    display: flex; justify-content: space-between; gap: 18px; flex-wrap: wrap;
+  }
+  .site-footer a { color: var(--ink-soft); text-decoration: none; border-bottom: 1px solid var(--rule); padding-bottom: 1px; }
+  .site-footer a:hover { color: var(--ink); border-bottom-color: var(--akesha); }
+</style>
+</head>
+<body>
+
+<div class="topnav">
+  <div class="topnav-inner">
+    <a class="topnav-brand" href="index.html" aria-label="All materials">Afterwords</a>
+    <nav class="topnav-links">
+      <a href="Teaching Learning and AI.html">The Workbook</a>
+      <a href="Pick a Framing.html">Panel framings</a>
+      <a href="Library.html">Library</a>
+    </nav>
+  </div>
+</div>
+
+<div class="hero">
+  <p class="eyebrow">After the panel</p>
+  <h1 class="hero-title">The parts we didn't get to <em>say.</em></h1>
+  <p class="hero-deck">Panels run sixty minutes. Thinking does not. Each panelist was asked to write the part they would have said if the clock had cooperated — unedited, in their voice.</p>
+  <div class="hero-meta">
+    <span><b>Three afterwords.</b> One published, two on the way.</span>
+    <span><b>Reading time</b> · 12–15 minutes for what's here.</span>
+  </div>
+</div>
+
+<div class="essays">
+
+  <!-- Akesha — published -->
+  <article class="essay essay--akesha">
+    <header class="essay-head">
+      <div class="avatar" aria-hidden="true">AH</div>
+      <div>
+        <p class="essay-byline-eyebrow">Afterword 01 · Published</p>
+        <h2 class="essay-name">Akesha Horton, PhD</h2>
+        <p class="essay-role">Director of Academic Engagement and Learning, Indiana University Bloomington</p>
+      </div>
+    </header>
+
+    <h3 class="essay-title">What I'd add now, with the time I didn't have on stage.</h3>
+    <p class="essay-deck">Notes after the panel.</p>
+
+    <section class="essay-section">
+      <h4 class="essay-h">The vendor capture problem nobody is naming</h4>
+      <p>Most institutional AI rollouts I've seen copy the model we use for everything else. An expert disseminates. Faculty sit. Certificates get issued. That model assumes there is a stable best practice somewhere upstream that we just need to push downstream. There isn't one. Not yet. Probably not for a while.</p>
+      <p>What that mismatch produces, in practice, is vendor capture. Institutions adopt tools because peer institutions did, with thin or nonexistent research on outcomes, equity, or labor implications. Procurement happens before pedagogy. Then the pedagogy bends to fit the tool. We owe our students more than that, and the cost of getting it wrong falls hardest on the people with the least leverage in the room (which is almost always the same set of students, for the same set of reasons).</p>
+      <p>The places I've watched real fluency build don't look like that. They look like communities of practice. Educators experimenting in groups, in public, with explicit permission to try things that don't work. The faculty I work with who've moved the furthest aren't the ones who attended the best webinar. They're the ones who found a peer group.</p>
+      <p>If I had a budget line item to write, it would say: unstructured peer learning. Time. Space. Permission to fail in your own classroom before we expect you to scale anything. That's not a workshop. That's not a vendor contract. That's the thing.</p>
+    </section>
+
+    <section class="essay-section">
+      <h4 class="essay-h">The friction question, sharper</h4>
+      <p>We talked on the panel about friction. AI is designed to remove it. Learning depends on it. You've heard some version of this argument by now. Here's the part I didn't get to.</p>
+      <p>When I work with faculty, the question I'm modeling for them isn't "where can I save time." It's "where am I designing friction out that students actually need?" That distinction matters because faculty are watching. What I do in my own practice ripples into theirs. If I optimize my own workflow without naming what I gave up to do it, I'm teaching them to do the same.</p>
+      <p>Every failure of AI is showing where human expertise is needed. Which means, uncomfortably, that you can't recognize what AI got wrong unless you've already done the foundational work. That's an argument for slowing down on automating the parts of learning that build the expertise in the first place. We risk optimizing away the conditions under which the next generation of educators learns to evaluate AI. That's a long-game problem, and we are mostly not making long-game decisions.</p>
+    </section>
+
+    <section class="essay-section">
+      <h4 class="essay-h">The "why" I should have led with</h4>
+      <p>Asked on the panel why I'm doing this, I gave a Punya Mishra answer. There's no such thing as ed tech, the market doesn't pay to build for educators, AI puts us in the design seat. All true. But the cleaner version, the one I've been thinking about since, is one word.</p>
+      <p class="essay-callout essay-callout--single">Agency.</p>
+      <p>For the first time in my career I can originate a tool instead of adapting someone else's. Build something for a specific learning problem I see, on my own time, without a vendor or a procurement cycle in the way. The reason that matters isn't novelty. It's that the people closest to a learning problem finally have the means to design for it. If you've spent any time in instructional design, you know how rare that is.</p>
+    </section>
+
+    <section class="essay-section">
+      <h4 class="essay-h">What's actually working in my own practice</h4>
+      <p>Three things I didn't get to say.</p>
+      <ol class="essay-list">
+        <li><span class="essay-list-label">I learn by writing about it.</span> I publish a Substack called Spilled and Studied, and the writing is the forcing function. If I can't explain what I just learned, I haven't actually learned it. Putting words on the page is where the half-formed ideas either harden or fall apart, and either outcome is useful.</li>
+        <li><span class="essay-list-label">I run a calibration test every couple of weeks.</span> I take a real piece of work I'm doing and run it through a tool I haven't used yet. Not to find a winner. To stay honest about what's changed in the field. The tools that were best six months ago are not the tools that are best now, and the only way I know that is because I keep checking.</li>
+        <li><span class="essay-list-label">The peer network I rely on is heterogeneous on purpose.</span> The people who've taught me the most aren't the ones giving keynotes. They're using AI in contexts I don't sit in. A K-12 ELD coach. A community college instructional designer. A first-gen doctoral student translating academic norms for the first time in her family. I get more from a 20-minute conversation with someone whose problems aren't mine than from another tutorial on prompt engineering.</li>
+      </ol>
+    </section>
+
+    <section class="essay-section">
+      <h4 class="essay-h">The thinking shift I didn't get to articulate</h4>
+      <p>When the moderator asked how my thinking on opportunities and risks has evolved, I gave the Safiya Noble and Ruha Benjamin answer. I stand by it. What I didn't get to say is that my position hasn't actually reversed. It's gotten more disciplined.</p>
+      <p>Three years ago, what I had was an instinct: pay attention to costs alongside benefits. What I have now is a question I run on every adoption decision. Who is paying for this? Who is benefiting? Where is it being used as a social good versus where is it just extracting value from people who have no leverage in the design? That isn't a softer question than I was asking before. It's a more specific one.</p>
+      <p>The big debate in education isn't whether to use AI. That ship is gone. The debate is what we're embracing and what we're giving up, and we have to be willing to answer the second half. Someone at the conference said efficiency erases authenticity, and I scribbled it down, because that's the trade I see being made constantly. Faster drafts. Less voice. A response that sounds professional and means nothing.</p>
+    </section>
+
+    <section class="essay-section">
+      <h4 class="essay-h">For the colleague who feels behind</h4>
+      <p>A version of this came up in audience Q&amp;A, and I want to redo it.</p>
+      <p class="essay-callout">Stop trying to learn AI. Pick one thing you actually need to do this week and ask AI to help you do it. That's the whole curriculum.</p>
+      <p>You don't have to read the white paper. You don't have to know what a transformer is. You have to drop in on something small, see what happens, and pay attention. The fluency builds from there.</p>
+      <p>And if you're feeling behind, you're not. There is no behind. The field is being built right now, by people who showed up and started practicing. You can be one of them.</p>
+    </section>
+
+    <section class="essay-section">
+      <h4 class="essay-h">Lines I keep coming back to, for the next room I'm in</h4>
+      <dl class="essay-lines">
+        <div class="essay-line">
+          <dt>On equity</dt>
+          <dd>The cost of getting AI integration wrong falls hardest on the students who already have the least leverage. That has to be the first question, not the last.</dd>
+        </div>
+        <div class="essay-line">
+          <dt>On faculty resistance</dt>
+          <dd>Resistance isn't always wrong. Sometimes it's the only signal we have that something we care about is at stake. The job isn't to overcome it. It's to listen to what it's telling us.</dd>
+        </div>
+        <div class="essay-line">
+          <dt>On where to start</dt>
+          <dd>Start with a problem you actually have. Not the problem AI is good at. The one keeping you up at night. Then ask whether AI can help.</dd>
+        </div>
+        <div class="essay-line">
+          <dt>On efficiency vs. authenticity</dt>
+          <dd>Efficiency is not the same as quality. A faster draft is not a better draft. We have to be honest about what we're trading.</dd>
+        </div>
+        <div class="essay-line">
+          <dt>On hype vs. reality</dt>
+          <dd>Most of what gets sold as AI in education is the same old PD model with a new logo. The real work is unstructured, peer-led, project-based, and slow.</dd>
+        </div>
+      </dl>
+    </section>
+  </article>
+
+  <!-- Yousuf — pending -->
+  <article class="essay essay--yousuf essay-pending">
+    <header class="essay-head">
+      <div class="avatar" aria-hidden="true">YM</div>
+      <div>
+        <p class="essay-byline-eyebrow">Afterword 02 · In progress</p>
+        <h2 class="essay-name">Yousuf Marvi</h2>
+        <p class="essay-role">Math Teacher and ELD Coach, Sierra Vista Middle School (Irvine USD)</p>
+      </div>
+    </header>
+    <p class="essay-pending-body">Yousuf is finishing his afterword — the parts of the panel he didn't get to share. In his voice, unedited, with the framings on effort, equity, and what AI flattens that didn't make the sixty-minute cut. It'll appear here when he's ready.</p>
+  </article>
+
+  <!-- Anne — pending -->
+  <article class="essay essay--anne essay-pending">
+    <header class="essay-head">
+      <div class="avatar" aria-hidden="true">AF</div>
+      <div>
+        <p class="essay-byline-eyebrow">Afterword 03 · In progress</p>
+        <h2 class="essay-name">Anne Fensie, PhD</h2>
+        <p class="essay-role">Director, Center for Teaching and Learning, University of Maine at Presque Isle</p>
+      </div>
+    </header>
+    <p class="essay-pending-body">Anne is finishing her afterword — the parts of the panel she didn't get to share. In her voice, unedited, with the framings on calibration, faculty learning, and what holds up under change that didn't make the sixty-minute cut. It'll appear here when she's ready.</p>
+  </article>
+
+</div>
+
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <span>Akesha Horton · Yousuf Marvi · Anne Fensie</span>
+    <span><a href="index.html">All materials</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
