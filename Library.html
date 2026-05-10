@@ -1,0 +1,968 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>The Library — recommendations from the panel</title>
+<meta name="description" content="An open library of readings, podcasts, substacks, and tools on teaching and learning with AI, curated by Akesha Horton, Yousuf Marvi, and Anne Fensie." />
+
+<style>
+  :root {
+    --bg: #faf7f2;
+    --ink: #1d1f23;
+    --ink-soft: #4a4d54;
+    --ink-muted: #6e7079;
+    --rule: #d9d3c5;
+    --rule-soft: #ece6d6;
+    --accent: #b85c2e;
+    --accent-soft: #f5e7dd;
+    --card: #fffdf9;
+    --card-border: #e8e1d1;
+    --akesha: #b85c2e;
+    --akesha-soft: #f5e7dd;
+    --yousuf: #2e6e8a;
+    --yousuf-soft: #d9e8ee;
+    --anne:   #6f5d3a;
+    --anne-soft: #ece4d2;
+    --shadow: 0 1px 0 rgba(0,0,0,.04), 0 6px 16px rgba(34,30,20,.06);
+    --serif: ui-serif, Georgia, "Iowan Old Style", "Cambria", serif;
+    --sans: ui-sans-serif, "Helvetica Neue", Arial, system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 17px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 1200px; margin: 0 auto; padding: 56px 28px 96px; }
+  @media (max-width: 720px) { .wrap { padding: 36px 18px 72px; } }
+  a { color: var(--ink); }
+
+  /* Top nav */
+  .topnav {
+    border-bottom: 1px solid var(--rule);
+    padding: 14px 0;
+    background: rgba(250,247,242,.95);
+    backdrop-filter: blur(6px);
+    position: sticky; top: 0; z-index: 10;
+  }
+  .topnav-inner {
+    max-width: 1200px; margin: 0 auto;
+    padding: 0 28px;
+    display: flex; align-items: center; justify-content: space-between; gap: 18px;
+    font-size: 13px;
+  }
+  @media (max-width: 720px) { .topnav-inner { padding: 0 18px; } }
+  .topnav-brand { font-weight: 600; }
+  .topnav-links { display: flex; gap: 18px; color: var(--ink-soft); }
+  .topnav-links a { text-decoration: none; color: var(--ink-soft); border-bottom: 1px solid transparent; padding-bottom: 1px; transition: border-color .15s ease, color .15s ease; }
+  .topnav-links a:hover { color: var(--ink); border-bottom-color: var(--accent); }
+
+  /* Header */
+  .eyebrow {
+    font-size: 13px; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--accent); font-weight: 600; margin: 0 0 14px;
+  }
+  h1.title {
+    font-family: var(--serif); font-weight: 600;
+    font-size: clamp(36px, 5.5vw, 60px);
+    line-height: 1.05; margin: 0 0 18px; letter-spacing: -.015em;
+  }
+  h1.title em { font-style: italic; color: var(--accent); }
+  p.subtitle {
+    font-family: var(--serif);
+    font-size: clamp(18px, 2.2vw, 22px);
+    color: var(--ink-soft);
+    line-height: 1.45; margin: 0 0 36px; max-width: 780px;
+  }
+
+  /* Filters */
+  .controls {
+    display: flex; flex-wrap: wrap;
+    gap: 10px 16px;
+    align-items: center;
+    padding: 16px 0;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    margin-bottom: 40px;
+  }
+  .controls .label {
+    font-size: 12px; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--ink-muted); margin-right: 4px;
+  }
+  .chip {
+    background: transparent;
+    border: 1px solid var(--card-border);
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-family: var(--sans);
+    font-size: 13.5px;
+    color: var(--ink-soft);
+    cursor: pointer;
+    transition: all .15s ease;
+  }
+  .chip:hover { border-color: var(--ink); color: var(--ink); }
+  .chip.active {
+    background: var(--ink); color: var(--bg); border-color: var(--ink);
+    font-weight: 600;
+  }
+  .controls .spacer { flex: 1; }
+  .stats { font-size: 13px; color: var(--ink-soft); }
+
+  /* Curator sections */
+  .curator {
+    margin: 0 0 64px;
+    border-top: 1px solid var(--rule);
+    padding-top: 32px;
+  }
+  .curator-head {
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    gap: 22px;
+    align-items: start;
+    margin-bottom: 28px;
+  }
+  .avatar {
+    width: 56px; height: 56px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 22px;
+    color: white;
+  }
+  .avatar.akesha { background: var(--akesha); }
+  .avatar.yousuf { background: var(--yousuf); }
+  .avatar.anne   { background: var(--anne); }
+  .curator-name {
+    font-family: var(--serif);
+    font-size: 28px; font-weight: 600; line-height: 1.15;
+    margin: 0 0 4px;
+    letter-spacing: -.005em;
+  }
+  .curator-role {
+    color: var(--ink-soft);
+    font-size: 14px; margin: 0 0 8px;
+  }
+  .curator-blurb {
+    font-family: var(--serif);
+    font-size: 17px;
+    color: var(--ink);
+    line-height: 1.4;
+    margin: 0;
+    max-width: 640px;
+  }
+  .curator-meta {
+    display: flex; gap: 14px; align-items: baseline;
+    margin-top: 10px;
+    font-size: 12.5px;
+    color: var(--ink-muted);
+  }
+
+  /* Items grid */
+  .items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  @media (max-width: 880px) { .items { grid-template-columns: 1fr; } }
+
+  .item {
+    background: var(--card);
+    border: 1px solid var(--card-border);
+    border-radius: 10px;
+    padding: 18px 20px 16px;
+    box-shadow: var(--shadow);
+    display: flex; flex-direction: column;
+    transition: border-color .15s ease, transform .15s ease;
+    position: relative;
+  }
+  .item:hover { border-color: var(--ink); transform: translateY(-1px); }
+  .item-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 6px;
+  }
+  .item-type {
+    font-size: 11px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .item-delete {
+    background: transparent; border: 0;
+    color: var(--ink-muted);
+    font-size: 16px; line-height: 1;
+    cursor: pointer; padding: 2px 6px;
+    border-radius: 4px;
+    opacity: 0; transition: opacity .15s ease, color .15s ease, background .15s ease;
+  }
+  .item:hover .item-delete { opacity: 1; }
+  .item-delete:hover { background: var(--accent-soft); color: var(--accent); }
+
+  .item-title {
+    font-family: var(--serif);
+    font-size: 19px; font-weight: 600;
+    line-height: 1.3; margin: 0 0 4px;
+    color: var(--ink);
+    text-wrap: pretty;
+  }
+  .item-title a {
+    text-decoration: none;
+    color: var(--ink);
+    border-bottom: 1px solid transparent;
+    transition: border-color .15s ease;
+  }
+  .item-title a:hover { border-bottom-color: var(--accent); }
+  .item-author {
+    font-size: 13.5px; color: var(--ink-soft);
+    margin: 0 0 10px;
+  }
+  .item-author em { font-style: italic; }
+  .item-note {
+    font-size: 14.5px;
+    color: var(--ink-soft);
+    line-height: 1.5;
+    margin: 6px 0 0;
+  }
+  .item-foot {
+    display: flex; gap: 12px; align-items: center;
+    margin-top: 12px;
+    font-size: 12.5px;
+    color: var(--ink-muted);
+  }
+  .item-link {
+    text-decoration: none;
+    color: var(--accent);
+    border-bottom: 1px solid var(--accent-soft);
+    padding-bottom: 1px;
+  }
+  .item-link:hover { border-bottom-color: var(--accent); }
+  .item-pinned {
+    margin-left: auto;
+    font-size: 11px; letter-spacing: .1em; text-transform: uppercase;
+    color: var(--ink-muted);
+  }
+
+  /* Add form */
+  .add-toggle {
+    margin-top: 18px;
+    background: transparent;
+    border: 1px dashed var(--card-border);
+    color: var(--ink-soft);
+    padding: 14px 18px;
+    border-radius: 10px;
+    font-family: var(--sans);
+    font-size: 14px;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    display: flex; align-items: center; gap: 10px;
+    transition: all .15s ease;
+  }
+  .add-toggle:hover { border-color: var(--ink); color: var(--ink); }
+  .add-toggle .plus { font-size: 18px; line-height: 1; }
+  .add-form {
+    margin-top: 18px;
+    background: var(--card);
+    border: 1px solid var(--card-border);
+    border-left: 3px solid;
+    border-radius: 10px;
+    padding: 22px 24px;
+  }
+  .add-form[data-curator="akesha"] { border-left-color: var(--akesha); }
+  .add-form[data-curator="yousuf"] { border-left-color: var(--yousuf); }
+  .add-form[data-curator="anne"]   { border-left-color: var(--anne); }
+  .add-form .form-eyebrow {
+    font-size: 12px; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--ink-muted); margin: 0 0 10px;
+    font-weight: 600;
+  }
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-bottom: 12px;
+  }
+  @media (max-width: 600px) { .form-row { grid-template-columns: 1fr; } }
+  .field { display: flex; flex-direction: column; gap: 4px; }
+  .field label {
+    font-size: 12px; letter-spacing: .08em; text-transform: uppercase;
+    color: var(--ink-muted);
+  }
+  .field input, .field textarea, .field select {
+    background: var(--bg);
+    border: 1px solid var(--card-border);
+    border-radius: 6px;
+    padding: 9px 12px;
+    font-family: var(--sans);
+    font-size: 14.5px;
+    color: var(--ink);
+    line-height: 1.4;
+    transition: border-color .15s ease;
+    width: 100%;
+  }
+  .field input:focus, .field textarea:focus, .field select:focus {
+    outline: 0;
+    border-color: var(--ink);
+  }
+  .field textarea { min-height: 78px; resize: vertical; font-family: var(--sans); }
+  .form-actions {
+    display: flex; gap: 10px; justify-content: flex-end;
+    margin-top: 12px;
+  }
+  .btn {
+    background: var(--ink); color: var(--bg);
+    border: 0;
+    padding: 9px 18px;
+    border-radius: 999px;
+    font-size: 13.5px; font-weight: 600;
+    font-family: var(--sans);
+    cursor: pointer;
+    transition: background .15s ease;
+  }
+  .btn:hover { background: var(--accent); }
+  .btn.ghost {
+    background: transparent;
+    color: var(--ink-soft);
+    border: 1px solid var(--card-border);
+  }
+  .btn.ghost:hover { background: transparent; border-color: var(--ink); color: var(--ink); }
+
+  /* Auth gate */
+  .gate {
+    background: var(--bg);
+    border: 1px dashed var(--rule);
+    padding: 18px 20px;
+    border-radius: 10px;
+    margin-top: 18px;
+  }
+  .gate p { margin: 0 0 12px; font-size: 14px; color: var(--ink-soft); }
+  .gate-row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+  .gate-row input {
+    flex: 1; min-width: 160px;
+    background: white;
+    border: 1px solid var(--card-border);
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+  .gate-row input:focus { outline: 0; border-color: var(--ink); }
+  .gate-error { color: var(--accent); font-size: 13px; margin-top: 8px; }
+  .signed-in {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 12.5px;
+    color: var(--ink-soft);
+    margin-top: 10px;
+  }
+  .signed-in .check { color: var(--akesha); }
+  .signed-in button {
+    background: transparent; border: 0;
+    color: var(--ink-muted);
+    font-size: 12.5px; cursor: pointer;
+    text-decoration: underline;
+    padding: 0;
+  }
+
+  /* Footer */
+  .foot {
+    margin-top: 64px;
+    padding: 28px 0 8px;
+    border-top: 1px solid var(--rule);
+    font-size: 13px;
+    color: var(--ink-muted);
+    display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px;
+  }
+  .foot a { color: var(--ink-muted); }
+
+  /* Empty state */
+  .empty {
+    padding: 24px 20px;
+    color: var(--ink-soft);
+    font-size: 14.5px;
+    font-style: italic;
+    background: var(--bg);
+    border: 1px dashed var(--rule);
+    border-radius: 10px;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<div class="topnav">
+  <div class="topnav-inner">
+    <span class="topnav-brand">The Library</span>
+    <nav class="topnav-links">
+      <a href="Pick a Framing.html">Panel framings</a>
+      <a href="Teaching Learning and AI.html">The Workbook</a>
+    </nav>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <p class="eyebrow">A curated library · open to readers</p>
+  <h1 class="title">What <em>they're</em> reading.</h1>
+  <p class="subtitle">Akesha, Yousuf, and Anne keep adding the books, podcasts, substacks, and tools that have actually shaped how they think about teaching and learning with AI. Browse what's here. Filter by medium. Each curator can sign in and add their own.</p>
+
+  <div class="controls" id="controls">
+    <span class="label">Filter</span>
+    <button class="chip active" data-filter="all">All</button>
+    <button class="chip" data-filter="Book">Books</button>
+    <button class="chip" data-filter="Article">Articles</button>
+    <button class="chip" data-filter="Podcast">Podcasts</button>
+    <button class="chip" data-filter="Substack">Substacks</button>
+    <button class="chip" data-filter="Video">Videos</button>
+    <button class="chip" data-filter="Tool">Tools</button>
+    <button class="chip" data-filter="Course">Courses</button>
+    <span class="spacer"></span>
+    <span class="stats" id="stats"></span>
+  </div>
+
+  <!-- Curator: Akesha -->
+  <section class="curator" data-curator="akesha">
+    <div class="curator-head">
+      <div class="avatar akesha">AH</div>
+      <div>
+        <h2 class="curator-name">Akesha Horton</h2>
+        <p class="curator-role">Director of Academic Engagement and Learning, Indiana University Bloomington</p>
+        <p class="curator-blurb">"I learn by building, then asking other people what I traded away. These are the texts and tools that taught me which questions to ask before I jump in."</p>
+        <div class="curator-meta">
+          <span><strong id="count-akesha">0</strong> recommendations</span>
+          <span id="signin-status-akesha"></span>
+        </div>
+      </div>
+    </div>
+    <div class="items" id="items-akesha"></div>
+    <button class="add-toggle" data-toggle="akesha">
+      <span class="plus">+</span> Akesha — add a recommendation
+    </button>
+    <div id="form-akesha"></div>
+  </section>
+
+  <!-- Curator: Yousuf -->
+  <section class="curator" data-curator="yousuf">
+    <div class="curator-head">
+      <div class="avatar yousuf">YM</div>
+      <div>
+        <h2 class="curator-name">Yousuf Marvi</h2>
+        <p class="curator-role">Math Teacher and ELD Coach, Sierra Vista Middle School (Irvine USD)</p>
+        <p class="curator-blurb">"My students are the test. I share what helps me see them more clearly — and what helps me decide when not to use AI at all."</p>
+        <div class="curator-meta">
+          <span><strong id="count-yousuf">0</strong> recommendations</span>
+          <span id="signin-status-yousuf"></span>
+        </div>
+      </div>
+    </div>
+    <div class="items" id="items-yousuf"></div>
+    <button class="add-toggle" data-toggle="yousuf">
+      <span class="plus">+</span> Yousuf — add a recommendation
+    </button>
+    <div id="form-yousuf"></div>
+  </section>
+
+  <!-- Curator: Anne -->
+  <section class="curator" data-curator="anne">
+    <div class="curator-head">
+      <div class="avatar anne">AF</div>
+      <div>
+        <h2 class="curator-name">Anne Fensie</h2>
+        <p class="curator-role">Director, Center for Teaching and Learning, University of Maine at Presque Isle</p>
+        <p class="curator-blurb">"I share what helps me think clearly about cognition, energy, and what's actually responsible. Most of these are short. I prefer the lowest-tier source that does the job."</p>
+        <div class="curator-meta">
+          <span><strong id="count-anne">0</strong> recommendations</span>
+          <span id="signin-status-anne"></span>
+        </div>
+      </div>
+    </div>
+    <div class="items" id="items-anne"></div>
+    <button class="add-toggle" data-toggle="anne">
+      <span class="plus">+</span> Anne — add a recommendation
+    </button>
+    <div id="form-anne"></div>
+  </section>
+
+  <div class="foot">
+    <span>The Library is curated by the panel. Recommendations you add are saved in your browser only.</span>
+    <span><a href="Pick a Framing.html">← Back to the panel</a></span>
+  </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script>
+  // ---- Configuration ----
+  // Fill these in with your Supabase project's URL + anon (publishable) key.
+  // See SETUP.md in this project for the SQL schema and step-by-step setup.
+  // Until both values are filled in, the library falls back to localStorage
+  // (curator additions only persist on the visitor's own device).
+  const SUPABASE_CONFIG = {
+    url: "YOUR_SUPABASE_URL",       // e.g. https://abcd1234.supabase.co
+    anonKey: "YOUR_SUPABASE_ANON_KEY" // public anon key from Project Settings → API
+  };
+
+  const SUPABASE_READY =
+    SUPABASE_CONFIG.url && !SUPABASE_CONFIG.url.startsWith("YOUR_") &&
+    SUPABASE_CONFIG.anonKey && !SUPABASE_CONFIG.anonKey.startsWith("YOUR_");
+
+  const sb = SUPABASE_READY
+    ? window.supabase.createClient(SUPABASE_CONFIG.url, SUPABASE_CONFIG.anonKey)
+    : null;
+
+  const STORAGE_KEY = "panel_library_v1";
+  const SESSION_KEY = "panel_library_session_v1";
+  const CURATORS = ["akesha", "yousuf", "anne"];
+  const TYPES = ["Book", "Article", "Podcast", "Substack", "Video", "Tool", "Course"];
+
+  // ---- Pre-seeded recommendations ----
+  // These are pinned (not user-deletable) and reflect what each panelist
+  // surfaced in the panel itself.
+  const SEED = {
+    akesha: [
+      {
+        id: "ak-1", type: "Book", pinned: true,
+        title: "Race After Technology: Abolitionist Tools for the New Jim Code",
+        author: "Ruha Benjamin",
+        url: "https://www.politybooks.com/bookdetail?book_slug=race-after-technology-abolitionist-tools-for-the-new-jim-code--9781509526406",
+        note: "Polity, 2019. The book that gave me the working principle: when someone benefits from a technology, someone else is usually being disenfranchised by the same one."
+      },
+      {
+        id: "ak-2", type: "Book", pinned: true,
+        title: "Algorithms of Oppression: How Search Engines Reinforce Racism",
+        author: "Safiya Umoja Noble",
+        url: "https://nyupress.org/9781479837243/algorithms-of-oppression/",
+        note: "NYU Press, 2018. Made me sharper about the questions I ask before adopting any tool."
+      },
+      {
+        id: "ak-3", type: "Book", pinned: true,
+        title: "Viral Justice: How We Grow the World We Want",
+        author: "Ruha Benjamin",
+        url: "https://press.princeton.edu/books/hardcover/9780691222882/viral-justice",
+        note: "Princeton, 2022. Read this if you only have time for one."
+      },
+      {
+        id: "ak-4", type: "Article", pinned: true,
+        title: "TPACK — Technological Pedagogical Content Knowledge",
+        author: "Punya Mishra & Matthew Koehler",
+        url: "https://punyamishra.com/research/tpack/",
+        note: "The frame I keep coming back to. Mishra's argument that there is no such thing as educational technology — because all technology was designed to make a profit — is the most useful single sentence I know."
+      },
+      {
+        id: "ak-5", type: "Course", pinned: true,
+        title: "GenAI IU — Generative AI course",
+        author: "Indiana University",
+        url: "https://expand.iu.edu/browse/kelley/ksbee/courses/public-genai-101",
+        note: "Open to anyone. Designed to be project-based rather than tool-tour-based."
+      }
+    ],
+    yousuf: [
+      {
+        id: "yo-1", type: "Course", pinned: true,
+        title: "AI Pioneers PLC",
+        author: "Irvine Unified School District",
+        url: "https://iusd.org/",
+        note: "Paid, opt-in, with a teacher on special assignment as facilitator. Five times a year. Both the structure and the near-peer matter — find or build a local equivalent."
+      }
+    ],
+    anne: [
+      {
+        id: "an-1", type: "Book", pinned: true,
+        title: "Why Don't Students Like School?",
+        author: "Daniel Willingham",
+        url: "https://www.danielwillingham.com/books.html",
+        note: "Where the line memory is the residue of thought comes from. The single most useful sentence I have for thinking about whether AI belongs in a given moment of a lesson."
+      },
+      {
+        id: "an-2", type: "Tool", pinned: true,
+        title: "what-uses-more.com",
+        author: "Comparison tool",
+        url: "https://what-uses-more.com/",
+        note: "Compares the energy use of an AI task against a familiar baseline (watching Netflix, running a fridge). Changed how I decide which tier of tool to reach for."
+      },
+      {
+        id: "an-3", type: "Article", pinned: true,
+        title: "Public data work on energy",
+        author: "Hannah Ritchie",
+        url: "https://ourworldindata.org/team/hannah-ritchie",
+        note: "I trust her numbers. Use her work to ground claims about AI's energy footprint in actual data."
+      },
+      {
+        id: "an-4", type: "Article", pinned: true,
+        title: "Research on the environmental costs of generative AI",
+        author: "Sasha Luccioni",
+        url: "https://www.sashaluccioni.com/",
+        note: "If you only read one researcher on AI's environmental cost, read her."
+      }
+    ]
+  };
+
+  // ---- State ----
+  function emptyAdded() { return { akesha: [], yousuf: [], anne: [] }; }
+
+  function loadStateLocal() {
+    try {
+      const raw = localStorage.getItem(STORAGE_KEY);
+      if (!raw) return { added: emptyAdded() };
+      const parsed = JSON.parse(raw);
+      return { added: { ...emptyAdded(), ...(parsed.added || {}) } };
+    } catch (e) { return { added: emptyAdded() }; }
+  }
+  function saveStateLocal() { try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch (e) {} }
+
+  async function loadStateRemote() {
+    const { data, error } = await sb
+      .from("library_items")
+      .select("id, curator, type, title, author, url, note, created_at")
+      .order("created_at", { ascending: false });
+    if (error) { console.error("Supabase load failed:", error); return { added: emptyAdded() }; }
+    const added = emptyAdded();
+    for (const row of (data || [])) {
+      if (!added[row.curator]) continue;
+      added[row.curator].push({
+        id: row.id, type: row.type, title: row.title,
+        author: row.author || "", url: row.url || "", note: row.note || "",
+        pinned: false, ts: row.created_at
+      });
+    }
+    return { added };
+  }
+
+  async function refreshState() {
+    if (sb) {
+      const next = await loadStateRemote();
+      state.added = next.added;
+    } else {
+      const next = loadStateLocal();
+      state.added = next.added;
+    }
+    renderAll();
+  }
+
+  // Session holds: which curator the visitor has signed in as, and their
+  // pass code held in memory so RPC calls can authenticate. Pass code is
+  // intentionally NOT written to storage — sign-in is per-tab.
+  function loadSession() {
+    try {
+      const raw = sessionStorage.getItem(SESSION_KEY);
+      const parsed = raw ? JSON.parse(raw) : null;
+      return { signedIn: (parsed && parsed.signedIn) || {}, pass: {} };
+    } catch (e) { return { signedIn: {}, pass: {} }; }
+  }
+  function saveSession() {
+    try { sessionStorage.setItem(SESSION_KEY, JSON.stringify({ signedIn: session.signedIn })); } catch (e) {}
+  }
+
+  const state = { added: emptyAdded() };
+  const session = loadSession();
+  let activeFilter = "all";
+
+  // ---- Render ----
+  const NAMES = { akesha: "Akesha", yousuf: "Yousuf", anne: "Anne" };
+
+  function allFor(curator) {
+    return [...SEED[curator], ...state.added[curator]];
+  }
+
+  function visibleItems(curator) {
+    const items = allFor(curator);
+    if (activeFilter === "all") return items;
+    return items.filter(i => i.type === activeFilter);
+  }
+
+  function escapeHtml(s) {
+    return String(s == null ? "" : s)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#39;");
+  }
+
+  function renderCurator(curator) {
+    const root = document.getElementById("items-" + curator);
+    const items = visibleItems(curator);
+    document.getElementById("count-" + curator).textContent = allFor(curator).length;
+
+    if (items.length === 0) {
+      root.innerHTML = `<div class="empty">No ${activeFilter === "all" ? "" : activeFilter.toLowerCase() + " "}recommendations from ${NAMES[curator]} yet.</div>`;
+      return;
+    }
+    root.innerHTML = "";
+    items.forEach(item => {
+      const isUserAdded = !item.pinned;
+      const titleHtml = item.url
+        ? `<a href="${escapeHtml(item.url)}" target="_blank" rel="noopener">${escapeHtml(item.title)}</a>`
+        : escapeHtml(item.title);
+      const linkRow = item.url
+        ? `<a class="item-link" href="${escapeHtml(item.url)}" target="_blank" rel="noopener">Open ↗</a>`
+        : "";
+      const pinned = item.pinned ? `<span class="item-pinned">Recommended in the panel</span>` : "";
+      const deleteBtn = (isUserAdded && session.signedIn[curator])
+        ? `<button class="item-delete" data-curator="${curator}" data-id="${escapeHtml(item.id)}" aria-label="Delete">×</button>`
+        : "";
+
+      const card = document.createElement("div");
+      card.className = "item";
+      card.innerHTML = `
+        <div class="item-head">
+          <span class="item-type">${escapeHtml(item.type)}</span>
+          ${deleteBtn}
+        </div>
+        <h3 class="item-title">${titleHtml}</h3>
+        <p class="item-author">${escapeHtml(item.author || "")}</p>
+        ${item.note ? `<p class="item-note">${escapeHtml(item.note)}</p>` : ""}
+        <div class="item-foot">
+          ${linkRow}
+          ${pinned}
+        </div>
+      `;
+      root.appendChild(card);
+    });
+
+    // Wire delete
+    root.querySelectorAll(".item-delete").forEach(btn => {
+      btn.addEventListener("click", async (e) => {
+        e.stopPropagation();
+        const id = btn.dataset.id;
+        const c = btn.dataset.curator;
+        if (!confirm("Remove this recommendation?")) return;
+        if (sb) {
+          const pass = session.pass[c];
+          if (!pass) { alert("Sign in again to delete — your session expired."); session.signedIn[c] = false; saveSession(); renderAll(); return; }
+          const { error } = await sb.rpc("delete_library_item", { p_curator: c, p_pass: pass, p_id: id });
+          if (error) { alert("Couldn't delete: " + (error.message || "unknown error")); return; }
+          await refreshState();
+        } else {
+          state.added[c] = state.added[c].filter(x => x.id !== id);
+          saveStateLocal();
+          renderAll();
+        }
+      });
+    });
+  }
+
+  function renderStats() {
+    const total = CURATORS.reduce((acc, c) => acc + allFor(c).length, 0);
+    const visible = CURATORS.reduce((acc, c) => acc + visibleItems(c).length, 0);
+    const stats = document.getElementById("stats");
+    if (activeFilter === "all") {
+      stats.textContent = `${total} recommendations across the panel`;
+    } else {
+      stats.textContent = `${visible} of ${total} match "${activeFilter}"`;
+    }
+  }
+
+  function renderSigninStatus(curator) {
+    const el = document.getElementById("signin-status-" + curator);
+    if (session.signedIn[curator]) {
+      el.innerHTML = `· <span class="check" style="color:var(--${curator})">●</span> Signed in as ${NAMES[curator]}`;
+    } else {
+      el.innerHTML = "";
+    }
+  }
+
+  function renderAll() {
+    CURATORS.forEach(c => { renderCurator(c); renderSigninStatus(c); });
+    renderStats();
+  }
+
+  // ---- Filter chips ----
+  document.querySelectorAll("#controls .chip").forEach(chip => {
+    chip.addEventListener("click", () => {
+      document.querySelectorAll("#controls .chip").forEach(c => c.classList.remove("active"));
+      chip.classList.add("active");
+      activeFilter = chip.dataset.filter;
+      renderAll();
+    });
+  });
+
+  // ---- Add form (with passcode gate) ----
+  function buildForm(curator) {
+    const wrapEl = document.getElementById("form-" + curator);
+    if (wrapEl.dataset.open === "1") {
+      wrapEl.innerHTML = "";
+      wrapEl.dataset.open = "0";
+      return;
+    }
+    wrapEl.dataset.open = "1";
+
+    const signedIn = !!session.signedIn[curator];
+    const formHtml = `
+      <div class="add-form" data-curator="${curator}">
+        <p class="form-eyebrow">${NAMES[curator]} — new recommendation</p>
+        ${signedIn ? "" : `
+          <div class="gate">
+            <p>Sign in as <strong>${NAMES[curator]}</strong> to add to her library. Pass code is shared with the panel.</p>
+            <div class="gate-row">
+              <input type="password" placeholder="Pass code" id="pass-${curator}" autocomplete="off" />
+              <button class="btn" id="signin-${curator}">Sign in</button>
+            </div>
+            <div class="gate-error" id="error-${curator}" hidden></div>
+          </div>
+        `}
+        ${signedIn ? `
+        <div class="form-row">
+          <div class="field">
+            <label for="title-${curator}">Title</label>
+            <input id="title-${curator}" placeholder="What's it called?" />
+          </div>
+          <div class="field">
+            <label for="author-${curator}">Author or source</label>
+            <input id="author-${curator}" placeholder="Who made it?" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="field">
+            <label for="type-${curator}">Type</label>
+            <select id="type-${curator}">
+              ${TYPES.map(t => `<option value="${t}">${t}</option>`).join("")}
+            </select>
+          </div>
+          <div class="field">
+            <label for="url-${curator}">Link (optional)</label>
+            <input id="url-${curator}" placeholder="https://..." />
+          </div>
+        </div>
+        <div class="field">
+          <label for="note-${curator}">Why you recommend it</label>
+          <textarea id="note-${curator}" placeholder="One or two sentences. What did this teach you, and who should read it?"></textarea>
+        </div>
+        <div class="form-actions">
+          <button class="btn ghost" id="cancel-${curator}">Cancel</button>
+          <button class="btn" id="save-${curator}">Add to library</button>
+        </div>
+        <div class="signed-in">
+          <span class="check" style="color:var(--${curator})">●</span>
+          Signed in as ${NAMES[curator]}
+          <button id="signout-${curator}">Sign out</button>
+        </div>
+        ` : ""}
+      </div>
+    `;
+    wrapEl.innerHTML = formHtml;
+
+    if (!signedIn) {
+      const tryIn = async () => {
+        const code = document.getElementById("pass-" + curator).value.trim().toLowerCase();
+        const errEl = document.getElementById("error-" + curator);
+        const okSignIn = () => {
+          session.signedIn[curator] = true;
+          session.pass[curator] = code;
+          saveSession();
+          wrapEl.dataset.open = "0";
+          buildForm(curator);
+          renderSigninStatus(curator);
+        };
+        if (sb) {
+          // Verify against Supabase by attempting a no-op RPC. The function
+          // raises on bad passcode and quietly succeeds on good.
+          const { error } = await sb.rpc("verify_curator", { p_curator: curator, p_pass: code });
+          if (error) {
+            errEl.textContent = "That passcode doesn't match. Try again.";
+            errEl.hidden = false;
+          } else {
+            okSignIn();
+          }
+        } else {
+          // Fallback for local-only mode: any non-empty passcode works.
+          if (code) { okSignIn(); }
+          else { errEl.textContent = "Enter a passcode."; errEl.hidden = false; }
+        }
+      };
+      document.getElementById("signin-" + curator).addEventListener("click", tryIn);
+      document.getElementById("pass-" + curator).addEventListener("keydown", (e) => {
+        if (e.key === "Enter") tryIn();
+      });
+    } else {
+      document.getElementById("cancel-" + curator).addEventListener("click", () => {
+        wrapEl.innerHTML = "";
+        wrapEl.dataset.open = "0";
+      });
+      document.getElementById("save-" + curator).addEventListener("click", async () => {
+        const title = document.getElementById("title-" + curator).value.trim();
+        if (!title) { alert("Give it a title."); return; }
+        const author = document.getElementById("author-" + curator).value.trim();
+        const type = document.getElementById("type-" + curator).value;
+        const url = document.getElementById("url-" + curator).value.trim();
+        const note = document.getElementById("note-" + curator).value.trim();
+
+        if (sb) {
+          const pass = session.pass[curator];
+          if (!pass) { alert("Sign in again — your session expired."); session.signedIn[curator] = false; saveSession(); buildForm(curator); buildForm(curator); return; }
+          const saveBtn = document.getElementById("save-" + curator);
+          saveBtn.disabled = true; saveBtn.textContent = "Adding…";
+          const { error } = await sb.rpc("add_library_item", {
+            p_curator: curator, p_pass: pass,
+            p_type: type, p_title: title,
+            p_author: author, p_url: url, p_note: note
+          });
+          if (error) {
+            saveBtn.disabled = false; saveBtn.textContent = "Add to library";
+            alert("Couldn't add: " + (error.message || "unknown error"));
+            return;
+          }
+          wrapEl.innerHTML = "";
+          wrapEl.dataset.open = "0";
+          await refreshState();
+        } else {
+          const item = {
+            id: curator + "-" + Date.now(),
+            type, title, author, url, note,
+            pinned: false, ts: Date.now()
+          };
+          state.added[curator].unshift(item);
+          saveStateLocal();
+          wrapEl.innerHTML = "";
+          wrapEl.dataset.open = "0";
+          renderAll();
+        }
+      });
+      document.getElementById("signout-" + curator).addEventListener("click", () => {
+        session.signedIn[curator] = false;
+        delete session.pass[curator];
+        saveSession();
+        wrapEl.dataset.open = "0";
+        buildForm(curator);
+        renderSigninStatus(curator);
+      });
+    }
+  }
+
+  document.querySelectorAll(".add-toggle").forEach(btn => {
+    btn.addEventListener("click", () => {
+      buildForm(btn.dataset.toggle);
+    });
+  });
+
+  // ---- Init ----
+  // First paint with whatever is locally cached (or empty), then refresh from
+  // Supabase if configured. This keeps the page responsive even on slow
+  // networks and shows a sensible state if Supabase is unreachable.
+  if (!sb) {
+    const cached = loadStateLocal();
+    state.added = cached.added;
+  }
+  renderAll();
+  refreshState();
+
+  // Subtle status indicator: in local-only mode, show a footer hint so the
+  // educator running this site knows additions aren't shared yet.
+  if (!sb) {
+    const hint = document.createElement("div");
+    hint.style.cssText = "max-width:1200px;margin:48px auto 80px;padding:0 64px;font:italic 13px/1.6 var(--serif);color:#9b8e7d;text-align:center;";
+    hint.innerHTML = "Library is running in local mode. Curator additions stay on this device. See <code style='font-style:normal;background:#f1ebde;padding:2px 6px;border-radius:3px;'>SETUP.md</code> to connect Supabase so additions are shared.";
+    document.body.appendChild(hint);
+  }
+</script>
+
+</body>
+</html>

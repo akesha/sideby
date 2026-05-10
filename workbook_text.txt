@@ -1,0 +1,741 @@
+
+[P]
+[P]Teaching, Learning, and AI
+[P]
+[P]A self-paced workbook drawn from a panel discussion on educator learning about AI
+[P]
+[P]
+[P]The panel
+[P]
+[P]This workbook is built from a panel discussion on how educators are learning to incorporate AI into their work. The conversation focused on the how, not the what: how educators develop their own AI fluency, how that connects to student learning, and what habits help them stay current in a field that is changing weekly.
+[P]
+[P]The panelists were:
+[P]
+[P]
+[P]Akesha Horton, PhD, Director of Academic Engagement and Learning, Indiana University Bloomington (Luddy School of Informatics, Computing, and Engineering)
+[P]
+[P]
+[P]Yousuf Marvi, Math Teacher and ELD Coach, Sierra Vista Middle School, Irvine Unified School District
+[P]
+[P]
+[P]Anne Fensie, PhD, Director of the Center for Teaching and Learning, University of Maine at Presque Isle
+[P]
+[P]
+[P]
+[P]
+[P]How to use this workbook
+[P]
+[P]Plan for 60 to 75 minutes. You can do it in one sitting or break it into four shorter sessions. You will need a course, program, or assignment you actually work on. Pick something real. Generic answers produce generic results.
+[P]
+[P]By the end you will have:
+[P]
+[P]
+[P]A short statement of your own why for AI in your teaching practice.
+[P]
+[P]
+[P]A position on six tensions the panel surfaced.
+[P]
+[P]
+[P]A revised assignment, policy, or activity ready to test.
+[P]
+[P]
+[P]A one-page commitment document with a date to revisit it.
+[P]
+[P]
+[P]
+[P]
+[P]What is inside
+[P]
+[P]
+[P]Section 1: What was said. Curated panel excerpts with reading prompts (about 15 minutes).
+[P]
+[P]
+[P]Section 2: Where you stand. Values mapping on six tensions (about 15 minutes).
+[P]
+[P]
+[P]Section 3: Apply it. A guided revision of one assignment, policy, or activity (about 25 minutes).
+[P]
+[P]
+[P]Section 4: Commit. Your one-page commitment document (about 15 minutes).
+[P]
+[P]
+[P]Back matter. Reading list and a guide to running this as a live workshop with your team.
+[P]
+[P]
+[P]
+[P]A NOTE BEFORE YOU START
+[P]
+[P]The panelists do not agree on everything. That is the point. This workbook is not designed to convince you that AI is good or bad for teaching. It is designed to help you make a clear, defensible decision in your own context, with your own students, for your own reasons.
+[P]
+[P]If your honest answer to a prompt is “I don’t know yet,” write that down. It is a real position.
+[P]
+
+[P]
+[P]
+[P]Section 1: What was said
+[P]
+[P]Three exchanges from the panel are below, each followed by a short reading prompt. Read the exchange first, then write your response. Do not skip the writing step. The writing is the work.
+[P]
+[P]
+[P]
+[P]
+[P]Exchange 1: Why are you doing this?
+[P]
+[P]The moderator opened with a deceptively simple question. Each panelist landed somewhere different. None of them led with personal efficiency, which the moderator noticed and named.
+[P]
+[P]“All technology was designed to make a profit. Even Canvas is based on WordPress, which was not designed for teaching or learning. With AI, I like the agency that it provides to educators, to be able to not worry about the cost involved in creating the types of tools that they need. It puts us, as educators, in the design seat.”
+[P]
+[P]Akesha Horton, citing Punya Mishra
+[P]
+[P]“My students are my why. When AI came about, I thought about multimodality. I do not have to wait around for text processing only. How do I understand what my novice language learner is doing in transformations? It completely transformed the way I think about the possibility of every single student.”
+[P]
+[P]Yousuf Marvi
+[P]
+[P]“I dug into a lot of learning. My chapter was about how to use AI to help and not hinder learning. I really wanted students to understand: how does learning happen? Where do you need that productive struggle? What can you offload? My why is to figure out the potential, but also where the dangers are.”
+[P]
+[P]Anne Fensie
+[P]
+[P]
+[P]
+[P]READING PROMPT 1
+[P]
+[P]Write three sentences. What is your why? If your honest answer is efficiency, write that. If it is professional pressure or institutional expectation, write that. The rest of this workbook will work either way. What matters is that the answer is true.
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]
+[P]
+
+[P]
+[P]
+[P]Exchange 2: Friction is where learning happens
+[P]
+[P]Friction came up early and stayed central. The panel converged on a paradox: AI is engineered to remove friction, but learning depends on the right kind of friction staying in place. The panelists differed on how to handle this.
+[P]
+[P]“I like to use Daniel Willingham’s quote of memory as the residue of thought. That is what it comes down to. We do not just absorb something and move on. We think about it, and that is what we are remembering.”
+[P]
+[P]Anne Fensie
+[P]
+[P]“Whenever the learning really occurs, it is in the failures of AI. When AI fails, that is when you realize you need that human in the loop for expertise. My goal is to make sure we are not erasing that friction when I am helping faculty develop their lessons.”
+[P]
+[P]Akesha Horton
+[P]
+[P]“AI is designed not to have friction. That is the whole point of it. The big ask of the educator is how to bring that in. I call it effort over output. If your effort over output ratio is close to one, you have learning happening. As soon as it goes way off from one, you have problems on either side.”
+[P]
+[P]Yousuf Marvi
+[P]
+[P]
+[P]
+[P]READING PROMPT 2
+[P]
+[P]Pick one assignment or activity you teach. Write its name on the first line. On the next lines, answer two questions in plain language.
+[P]
+[P]Assignment or activity:
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]Where is the productive struggle in this task right now?
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]What might AI flatten if a student used it without thinking?
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]
+[P]
+
+[P]
+[P]
+[P]Exchange 3: Triumphs, disasters, and the human in the loop
+[P]
+[P]When the moderator asked about evolved thinking and personal habits, the panelists got specific. Anne told a story that earned a flinch from the room.
+[P]
+[P]“I was developing a platform to track all of our online course content. I had a conversation with AI about a quick update to all of the classes. I just followed the steps. It overrode two thirds of the classes with the same information, completely wiping out two thirds of my database. No undo button. No backup. I spent ten hours in my hotel room at AAC&U manually copying and pasting changes back. I am now much more critical of AI output. I am afraid of getting my humanness out.”
+[P]
+[P]Anne Fensie
+[P]
+[P]“In the past two months I have made about thirty different apps. Are they good? I do not know. They are in different ranges of quality. But I am learning how. I am meeting people through peer networks who I can ask questions about which tools to use, what I am giving up in terms of privacy. It is not just project-based learning, it is peer-based learning, and it is not being intimidated to ask questions.”
+[P]
+[P]Akesha Horton
+[P]
+[P]“We have an AI Pioneers PLC where teachers are paid to opt in and experiment. There is a teacher on special assignment whose job is to lead and facilitate it. I have been fortunate to be in a district that has thought about what structured peer collaboration looks like. So we are constantly learning from each other.”
+[P]
+[P]Yousuf Marvi
+[P]
+[P]
+[P]
+[P]READING PROMPT 3
+[P]
+[P]Write down one AI triumph and one AI disaster from your own work. They do not have to be dramatic. The point is to name what each one taught you. If you have not had a disaster yet, write the closest near-miss.
+[P]
+[P]Triumph:
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]What rule did it teach you?
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]Disaster or near-miss:
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]What rule did it teach you?
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+
+[P]
+[P]
+[P]Section 2: Where you stand
+[P]
+[P]The panel surfaced six tensions. They are real disagreements, not strawmen. For each one, mark where you sit on the continuum and write one sentence on why. “I don’t know” is allowed but it has to be earned. If you mark the middle, your sentence should explain what you would need to know to commit.
+[P]
+[P]
+[P]
+[P]
+[P]1. Frictionless AI vs. productive struggle
+[P]
+[P]Yousuf framed this as effort over output. AI is built to drive that ratio toward zero. Learning needs it close to one. How much friction do you preserve, and how much do you let AI flatten?
+[P]
+[P]Use AI to remove as much friction as possible
+[P]
+[P]Preserve productive struggle even at the cost of efficiency
+[P]
+[P]├─────────────────────────────────────────────────────────────────────────────────────────────────┤
+[P]
+[P]Mark where you sit. Then write one sentence below on why.
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]
+[P]
+[P]
+[P]2. Educator efficiency vs. student-centered orientation
+[P]
+[P]The moderator pointed out that none of the panelists led with personal efficiency. That was deliberate or revealing. Where does your why actually live?
+[P]
+[P]Primarily about my own time and workload
+[P]
+[P]Primarily about what students are learning
+[P]
+[P]├─────────────────────────────────────────────────────────────────────────────────────────────────┤
+[P]
+[P]Mark where you sit. Then write one sentence below on why.
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]
+[P]
+[P]
+[P]3. AI literacy as a goal vs. AI literacy as part of core skill development
+[P]
+[P]Yousuf described a schema: AI literacy, then core skills, then human discernment. He warned that K–12 students are not always developmentally ready to exercise the agency AI requires. Higher ed educators face a related question for adult learners with uneven foundations.
+[P]
+[P]Teach AI literacy as a stand-alone competency
+[P]
+[P]Teach core skills first; AI literacy emerges from that
+[P]
+[P]├─────────────────────────────────────────────────────────────────────────────────────────────────┤
+[P]
+[P]Mark where you sit. Then write one sentence below on why.
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]
+[P]
+[P]
+[P]4. Mandate vs. curiosity and skepticism
+[P]
+[P]Anne’s closing nugget was that she wants to see AI introduced “not as a mandate, but an opportunity for curiosity and skepticism, with learners at the center.” Many institutions are headed the opposite direction.
+[P]
+[P]AI adoption should be required and standardized
+[P]
+[P]AI adoption should be invitational and exploratory
+[P]
+[P]├─────────────────────────────────────────────────────────────────────────────────────────────────┤
+[P]
+[P]Mark where you sit. Then write one sentence below on why.
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]
+[P]
+[P]
+[P]5. Tool-first vs. problem-of-practice-first
+[P]
+[P]Yousuf’s closing nugget: “I would like to see the problem of practice, and where AI comes in, as the part of that process, and not the starting and the ending part of that conversation.”
+[P]
+[P]Start with the AI tool and find a use for it
+[P]
+[P]Start with a problem of practice and ask whether AI helps
+[P]
+[P]├─────────────────────────────────────────────────────────────────────────────────────────────────┤
+[P]
+[P]Mark where you sit. Then write one sentence below on why.
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]
+[P]
+[P]
+[P]6. Adoption urgency vs. ethical and environmental caution
+[P]
+[P]Anne opened the panel with urgency: change is too slow in higher ed and faculty need to push. Akesha and Anne later raised the sociotechnical and environmental costs (Noble, Benjamin, the energy footprint of video generation). These are not opposed, but they pull in different directions when the budget is your time and attention.
+[P]
+[P]Move fast; the cost of waiting is higher than the cost of getting it wrong
+[P]
+[P]Move slowly; the harms of careless adoption are real and unequally distributed
+[P]
+[P]├─────────────────────────────────────────────────────────────────────────────────────────────────┤
+[P]
+[P]Mark where you sit. Then write one sentence below on why.
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]
+[P]
+[P]LOOK AT YOUR SIX MARKS TOGETHER
+[P]
+[P]Stand back from the page. Where are you clustered? If your marks are mostly on the left, your working stance favors speed and integration. Mostly on the right, your stance favors caution and student-centered design. A mix is fine and probably honest. Whatever pattern you see, write one sentence below describing your overall position in your own words.
+[P]
+[P]My working stance on AI in my teaching, in one sentence:
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+
+[P]
+[P]
+[P]Section 3: Apply it
+[P]
+[P]Pick one of three pathways. Each takes about 25 minutes. Pick the one that maps to a real problem you have right now, not the one that sounds most interesting in the abstract. You can come back and do the others later.
+[P]
+[P]
+[P]
+[P]
+[P]Pathway A is for assignment redesign. Pick this if you have an assignment that AI is changing whether you like it or not.
+[P]
+[P]
+[P]Pathway B is for course-level policy. Pick this if your students do not know what is and is not allowed in your course, or if your current policy is a copy-paste.
+[P]
+[P]
+[P]Pathway C is for problem-of-practice scoping. Pick this if you suspect AI may be a solution but you have not named the problem yet.
+[P]
+[P]
+[P]
+[P]
+[P]Pathway A: Redesign an assignment to preserve productive struggle
+[P]
+[P]Take one assignment from the course you actually teach. Walk it through these prompts in order.
+[P]
+[P]WORKED EXAMPLE
+[P]
+[P]An undergraduate writing course assigns a 1,500-word analysis of a primary source. Students used to spend the first week annotating. AI flattens the annotation step in seconds. The instructor preserved friction by changing the deliverable: students now submit the annotation log itself, with timestamps, alongside the analysis. The struggle moved from “find the moves” to “notice your own thinking,” which is closer to what the assignment was really teaching.
+[P]
+[P]
+[P]
+[P]A1. Name the assignment and the learning outcome it serves.
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]A2. Where is the productive struggle in this assignment? Be specific.
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]A3. What part of the task does AI flatten? Be honest, even if it is the part you were proudest of.
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]A4. Redesign one element so the friction stays. You can change the deliverable, the process, or the evaluation criteria. Pick one.
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]A5. What will you tell students about why this assignment is structured this way?
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]
+[P]
+
+[P]
+[P]
+[P]Pathway B: Draft a course-level AI policy that names the why
+[P]
+[P]Most AI policies are a yes or no. The panel’s framing suggests something more useful: a policy that tells students why your course makes the choices it does. It is shorter than you think.
+[P]
+[P]WORKED EXAMPLE
+[P]
+[P]A graduate research methods course allows AI for literature search and brainstorming, requires disclosure for any text used in drafts, and prohibits AI for the final synthesis paper. The policy explains in two sentences that the course is teaching students to develop a defensible argument from messy evidence, that AI is excellent at the messy evidence step and unreliable at the defensible argument step, and that the course design follows that distinction.
+[P]
+[P]
+[P]
+[P]B1. What is the central skill or capacity this course is trying to develop?
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]B2. Where in the course does AI help students get to that skill faster or more equitably?
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]B3. Where in the course would AI short-circuit the development of that skill?
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]B4. Draft your policy in three sentences. Sentence one: what is allowed. Sentence two: what is not. Sentence three: why.
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]B5. What disclosure or documentation will you ask students to provide, and how will you respond if they do not?
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]
+[P]
+
+[P]
+[P]
+[P]Pathway C: Define a problem of practice and identify whether AI is part of the solution
+[P]
+[P]Yousuf’s closing nugget: AI should be part of the process, not the starting and ending point of the conversation. This pathway asks you to start where he says to start.
+[P]
+[P]WORKED EXAMPLE
+[P]
+[P]A faculty developer noticed that adjunct instructors in one program were spending hours per week writing detailed feedback on early drafts and burning out. The problem of practice was not “we need an AI feedback tool.” It was “adjunct workload is unsustainable, and feedback quality is uneven across sections.” Once named, AI showed up as one possible piece (a feedback rubric assistant for instructors) alongside non-AI options (a peer review structure, a reduction in feedback frequency). The decision to use AI followed the problem instead of leading it.
+[P]
+[P]
+[P]
+[P]C1. What is the problem of practice in your work right now? State it without mentioning AI.
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]C2. Who is affected, and how do you know? Name evidence, not impressions.
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]C3. List two or three possible responses. Some should not involve AI. Force yourself to write the non-AI options first.
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]C4. If AI is part of the response, what specifically does it do, and what is the human still responsible for?
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]C5. What would tell you in three months that the response is working, or that it is not?
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+
+[P]
+[P]
+[P]Section 4: Commit
+[P]
+[P]This is the page you keep. Fill it in, sign it, put it somewhere you will see it. The point is not to predict the future. The point is to make a decision concrete enough that you can tell, later, whether you followed through.
+[P]
+[P]
+[P]
+[P]
+[P]Three things I will change
+[P]
+[P]These should be small and specific. Not “rethink my grading.” Try “add an annotation log to the source analysis assignment by week three.”
+[P]
+[P]1.
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]2.
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]3.
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]
+[P]
+[P]
+[P]One thing I will watch for
+[P]
+[P]Pick a concern, blind spot, or equity question that the panel raised that you are not sure you have a handle on yet. Name it. Write what evidence would tell you it is or is not a problem in your context.
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]
+[P]
+[P]
+[P]One person I will talk to about this
+[P]
+[P]Anne, Akesha, and Yousuf all named peer learning as the move that worked. Not webinars. Not certificates. People. Pick one.
+[P]
+[P]Name and role:
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]What I want to ask them:
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]
+[P]
+[P]
+[P]Date I will revisit this
+[P]
+[P]Pick a real date, no more than 90 days out. Put it on your calendar before you close this document.
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+[P]
+[P]
+[P]
+[P]Signature
+[P]
+[P]_______________________________________________________________________________________________
+[P]
+
+[P]
+[P]
+[P]Reading list
+[P]
+[P]Each of these came up in the panel, either by name or by clear reference. Start with whichever sits closest to your six marks in Section 2.
+[P]
+[P]
+[P]
+[P]
+[P]On how learning works
+[P]
+[P]Daniel Willingham, Why Don’t Students Like School? A Cognitive Scientist Answers Questions About How the Mind Works and What It Means for the Classroom. The “memory is the residue of thought” claim Anne quoted comes from this book.
+[P]
+[P]
+[P]
+[P]
+[P]On educators as designers, not consumers, of technology
+[P]
+[P]Punya Mishra and Matthew Koehler’s work on TPACK (Technological Pedagogical Content Knowledge) is the foundation Akesha referenced. Mishra’s argument that there is no such thing as educational technology, because all technology was designed for profit, is a useful frame for evaluating any tool you adopt.
+[P]
+[P]
+[P]
+[P]
+[P]On the sociotechnical lens
+[P]
+[P]Safiya Umoja Noble, Algorithms of Oppression: How Search Engines Reinforce Racism (NYU Press, 2018).
+[P]
+[P]Ruha Benjamin, Race After Technology: Abolitionist Tools for the New Jim Code (Polity, 2019), and Viral Justice: How We Grow the World We Want (Princeton University Press, 2022). Akesha’s working principle (someone benefits from a technology, and someone else is usually being disenfranchised by the same one) is a one-line summary of Benjamin’s argument.
+[P]
+[P]
+[P]
+[P]
+[P]On the environmental cost of AI
+[P]
+[P]Anne referenced the energy comparison tool what-uses-more.com, which lets you compare the energy use of an AI task against a familiar baseline like watching Netflix. Pair it with Hannah Ritchie’s public data work on energy and Sasha Luccioni’s research on the environmental costs of generative AI for a fuller picture.
+[P]
+[P]
+[P]
+[P]
+[P]On educator self-directed learning
+[P]
+[P]Indiana University’s Generative AI course is open to anyone. Search for “GenAI IU” or contact Akesha for the current URL. For peer-based learning structures, look up your local equivalents of Irvine Unified’s AI Pioneers PLC: paid, opt-in, structured time for educators to experiment together with a facilitator.
+[P]
+[P]
+[P]
+[P]A NOTE ON WHAT IS MISSING HERE
+[P]
+[P]This list reflects the panel. It is not a survey of the field. Critical voices not named in the panel that are worth reading include sienta Costanza-Chock on design justice, Audrey Watters on edtech history, and the AI Now Institute’s annual reports. Add your own. The reading list is a starting point, not a syllabus.
+[P]
+
+[P]
+[P]
+[P]Facilitate this with your team
+[P]
+[P]If you want to run this as a live workshop, here are three formats that map onto the workbook. The self-paced version is the default; everything below is a remix.
+[P]
+[P]
+[P]
+[P]
+[P]Format 1: A 75-minute live workshop
+[P]
+[P]Best for a department meeting, a faculty learning community, or a half-day teaching retreat where you have one block.
+[P]
+[P]
+[P]Opening (5 min). Read the panelist quotes from Exchange 1 aloud. Ask people to write their why on a sticky note.
+[P]
+[P]
+[P]Where you stand (15 min). Use Section 2 as a values-mapping activity. Tape the six tensions on the walls and ask people to physically stand on the continuum.
+[P]
+[P]
+[P]Apply it (35 min). Break into three small groups by pathway (A, B, or C). Each group works through the prompts together with a designated scribe.
+[P]
+[P]
+[P]Commit (15 min). Each person fills in their own Section 4. Pair people up to share their three changes.
+[P]
+[P]
+[P]Close (5 min). Ask the room: what do you want to see more of regarding educator learning about AI? Echo Anne’s, Akesha’s, and Yousuf’s closing nuggets.
+[P]
+[P]
+[P]
+[P]
+[P]Format 2: A four-week department series
+[P]
+[P]Best for a CTL or program with a regular meeting cadence.
+[P]
+[P]
+[P]Week 1: Section 1 plus a shared reading from the reading list. Discussion-based.
+[P]
+[P]
+[P]Week 2: Section 2 as a live values-mapping activity. Surface where the department actually disagrees.
+[P]
+[P]
+[P]Week 3: Section 3. Each person brings one assignment, policy, or problem of practice. Workshop in pairs.
+[P]
+[P]
+[P]Week 4: Section 4 plus a peer-accountability structure. Pair people up; they meet again in 60 days to compare what actually changed.
+[P]
+[P]
+[P]
+[P]
+[P]Format 3: A 25-minute warm-up at a larger event
+[P]
+[P]Best for a faculty development day where this is one session among many. Use only Section 2. Skip the rest.
+[P]
+[P]
+[P]
+[P]PRE-WORK AND FOLLOW-UP SUGGESTIONS
+[P]
+[P]Pre-work: ask participants to bring one assignment and the prior 24 hours of their own AI use written down without judgment.
+[P]
+[P]Follow-up: schedule a 30-minute check-in 60 days out. Ask each participant which of their three commitments held, which slipped, and what they learned from the slips. The slips are the data.
+[P]
+
+[P]
+[P]
+[P]Acknowledgements
+[P]
+[P]This workbook is built from a panel discussion on educator learning about AI, hosted by Side By Side. The panel featured Akesha Horton, Yousuf Marvi, and Anne Fensie, with thanks to the moderator and the audience members whose questions shaped the second half of the conversation.
+[P]
+[P]Quotes have been lightly edited for length and clarity. The framings, prompts, and pathways are this workbook’s contribution and should not be attributed to the panelists individually.
+[P]
+[P]
+[P]

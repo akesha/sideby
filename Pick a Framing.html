@@ -1,0 +1,1262 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>How three educators are actually learning AI</title>
+<meta name="description" content="An interactive read of a panel discussion on educator learning about AI. Four questions, three different working answers, your vote on whose framing resonates." />
+
+<style>
+  :root {
+    --bg: #faf7f2;
+    --ink: #1d1f23;
+    --ink-soft: #4a4d54;
+    --rule: #d9d3c5;
+    --accent: #b85c2e;       /* warm rust */
+    --accent-soft: #f5e7dd;
+    --card: #fffdf9;
+    --card-border: #e8e1d1;
+    --you: #1f4d3a;          /* "your pick" green */
+    --you-soft: #e2eee7;
+    --hl: #f3d68a;           /* highlighter yellow */
+    --hl-soft: #fbeec3;
+    --shadow: 0 1px 0 rgba(0,0,0,.04), 0 6px 16px rgba(34,30,20,.06);
+    --serif: ui-serif, Georgia, "Iowan Old Style", "Cambria", serif;
+    --sans: ui-sans-serif, "Helvetica Neue", Arial, system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 17px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 1200px; margin: 0 auto; padding: 56px 28px 96px; }
+  @media (max-width: 720px) { .wrap { padding: 36px 18px 72px; } }
+
+  /* Header */
+  .eyebrow {
+    font-family: var(--sans);
+    font-size: 13px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 600;
+    margin: 0 0 14px;
+  }
+  h1.title {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: clamp(32px, 5vw, 52px);
+    line-height: 1.1;
+    margin: 0 0 16px;
+    letter-spacing: -.01em;
+  }
+  p.subtitle {
+    font-family: var(--serif);
+    font-size: clamp(18px, 2.2vw, 22px);
+    color: var(--ink-soft);
+    line-height: 1.4;
+    margin: 0 0 32px;
+    max-width: 780px;
+  }
+
+  /* Panelist strip */
+  .panelists {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    padding: 18px 0;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    margin: 24px 0 48px;
+  }
+  @media (max-width: 720px) { .panelists { grid-template-columns: 1fr; gap: 10px; } }
+  .panelist {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+  }
+  .panelist .dot {
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    flex: 0 0 10px;
+    transform: translateY(2px);
+  }
+  .panelist .name { font-weight: 600; font-size: 15px; }
+  .panelist .role {
+    color: var(--ink-soft);
+    font-size: 13.5px;
+    line-height: 1.35;
+  }
+  .dot.akesha { background: #b85c2e; }
+  .dot.yousuf { background: #2e6e8a; }
+  .dot.anne   { background: #6f5d3a; }
+
+  /* How to read */
+  .howto {
+    background: var(--accent-soft);
+    border-left: 3px solid var(--accent);
+    padding: 16px 20px;
+    border-radius: 4px;
+    font-size: 15px;
+    color: var(--ink-soft);
+    margin: 0 0 24px;
+    max-width: 820px;
+  }
+  .howto strong { color: var(--ink); }
+  .howto .legend {
+    display: flex; gap: 18px; flex-wrap: wrap;
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px dashed rgba(184, 92, 46, .25);
+    font-size: 13.5px;
+  }
+  .howto .legend span { display: inline-flex; align-items: center; gap: 6px; }
+  .howto .legend .swatch {
+    display: inline-block;
+    width: 14px; height: 14px;
+    border-radius: 3px;
+  }
+  .howto .legend .swatch.pick { background: var(--you); }
+  .howto .legend .swatch.hl   { background: var(--hl); }
+
+  /* Question block */
+  .qblock { margin: 0 0 80px; }
+  .q-num {
+    font-family: var(--serif);
+    font-size: 14px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin: 0 0 6px;
+  }
+  .q-title {
+    font-family: var(--serif);
+    font-size: clamp(24px, 3vw, 34px);
+    line-height: 1.18;
+    margin: 0 0 12px;
+    font-weight: 600;
+  }
+  .q-context {
+    color: var(--ink-soft);
+    max-width: 760px;
+    margin: 0 0 28px;
+    font-size: 16.5px;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+  @media (max-width: 980px) { .cards { grid-template-columns: 1fr; } }
+
+  .card {
+    background: var(--card);
+    border: 1px solid var(--card-border);
+    border-radius: 10px;
+    padding: 22px 22px 18px;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+  }
+  .card.picked {
+    border-color: var(--you);
+    box-shadow: 0 1px 0 rgba(0,0,0,.04), 0 8px 22px rgba(31,77,58,.18);
+  }
+  .card-head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 0 10px;
+  }
+  .card-head .dot { width: 10px; height: 10px; border-radius: 50%; }
+  .card-head .who { font-weight: 600; font-size: 14.5px; }
+  .card-head .role { color: var(--ink-soft); font-size: 13px; margin-top: 2px; }
+  .pull {
+    font-family: var(--serif);
+    font-size: 19px;
+    line-height: 1.4;
+    color: var(--ink);
+    margin: 4px 0 14px;
+    font-weight: 500;
+  }
+  .body { font-size: 15px; color: var(--ink-soft); margin: 0 0 18px; line-height: 1.6; }
+  .body em { color: var(--ink); font-style: italic; }
+
+  /* Highlightable sentences */
+  .sent {
+    cursor: pointer;
+    border-radius: 2px;
+    padding: 1px 0;
+    transition: background-color .15s ease, box-shadow .15s ease;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+  }
+  .sent:hover {
+    background-color: var(--hl-soft);
+  }
+  .sent.lit {
+    background-color: var(--hl);
+    color: var(--ink);
+  }
+  .body .sent.lit { color: var(--ink); }
+
+  .vote {
+    margin-top: auto;
+    padding-top: 12px;
+    border-top: 1px dashed var(--card-border);
+  }
+  .vote-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    border: 1px solid var(--card-border);
+    color: var(--ink);
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-family: var(--sans);
+    font-size: 13.5px;
+    cursor: pointer;
+    transition: all .15s ease;
+  }
+  .vote-button:hover { border-color: var(--ink); }
+  .vote-button.picked {
+    background: var(--you-soft);
+    border-color: var(--you);
+    color: var(--you);
+    font-weight: 600;
+  }
+  .vote-button .check { display: none; }
+  .vote-button.picked .check { display: inline; }
+
+  .vote-meta {
+    margin-top: 10px;
+    font-size: 12.5px;
+    color: var(--ink-soft);
+    min-height: 18px;
+  }
+
+  /* Progress bar at top */
+  .progress {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: rgba(250,247,242,.95);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid var(--rule);
+    padding: 10px 0;
+    margin: -56px -28px 32px;
+  }
+  @media (max-width: 720px) { .progress { margin: -36px -18px 24px; } }
+  .progress-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 28px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 13px;
+    color: var(--ink-soft);
+  }
+  @media (max-width: 720px) {
+    .progress-inner { padding: 0 18px; flex-wrap: wrap; gap: 8px 14px; }
+  }
+  .progress-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+  }
+  .progress-pill .dot-mini {
+    width: 8px; height: 8px; border-radius: 50%;
+  }
+  .progress-pill .dot-mini.picks { background: var(--you); }
+  .progress-pill .dot-mini.hls   { background: var(--hl); }
+  .progress-bar {
+    height: 4px;
+    background: var(--card-border);
+    border-radius: 2px;
+    flex: 1;
+    min-width: 80px;
+    overflow: hidden;
+  }
+  @media (max-width: 720px) { .progress-bar { width: 100%; flex-basis: 100%; order: 99; } }
+  .progress-fill {
+    height: 100%;
+    width: 0%;
+    background: var(--accent);
+    transition: width .25s ease;
+  }
+  .reset-link a {
+    color: var(--ink-soft);
+    font-size: 12.5px;
+    text-decoration: underline;
+  }
+
+  /* Footer / CTA */
+  .summary {
+    margin-top: 56px;
+    padding: 28px 28px;
+    background: var(--card);
+    border: 1px solid var(--card-border);
+    border-radius: 10px;
+  }
+  .summary h2 {
+    font-family: var(--serif);
+    font-size: 24px;
+    margin: 0 0 12px;
+    font-weight: 600;
+  }
+  .summary p { color: var(--ink-soft); margin: 0 0 12px; }
+  .tally {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin: 18px 0 4px;
+  }
+  @media (max-width: 720px) { .tally { grid-template-columns: 1fr; } }
+  .tally-cell {
+    padding: 12px 14px;
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+    background: var(--bg);
+  }
+  .tally-name { font-weight: 600; font-size: 14px; display: flex; align-items: center; gap: 8px; }
+  .tally-count { font-family: var(--serif); font-size: 28px; line-height: 1; margin-top: 6px; }
+  .tally-share { font-size: 12.5px; color: var(--ink-soft); margin-top: 4px; }
+
+  /* Philosophy synthesis */
+  .philosophy {
+    margin-top: 22px;
+    padding-top: 22px;
+    border-top: 1px solid var(--card-border);
+  }
+  .philosophy .archetype-label {
+    font-family: var(--sans);
+    font-size: 12px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin: 0 0 4px;
+  }
+  .philosophy .archetype {
+    font-family: var(--serif);
+    font-size: 28px;
+    line-height: 1.18;
+    margin: 0 0 10px;
+    font-weight: 600;
+    letter-spacing: -.005em;
+  }
+  .philosophy .archetype em {
+    font-style: italic;
+    color: var(--accent);
+  }
+  .philosophy .stance {
+    font-family: var(--serif);
+    font-size: 17.5px;
+    line-height: 1.5;
+    color: var(--ink);
+    margin: 0 0 22px;
+    max-width: 700px;
+  }
+  .insights {
+    list-style: none;
+    padding: 0;
+    margin: 6px 0 26px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .insights li {
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    gap: 14px;
+    padding: 12px 14px;
+    background: var(--bg);
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+    font-size: 14.5px;
+    color: var(--ink);
+    line-height: 1.5;
+  }
+  .insights .insight-q {
+    font-family: var(--serif);
+    font-size: 12px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    padding-top: 2px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .insights .insight-q .dot { width: 8px; height: 8px; border-radius: 50%; }
+  .insights .insight-text strong {
+    color: var(--ink);
+    font-weight: 600;
+  }
+  @media (max-width: 720px) {
+    .insights li { grid-template-columns: 1fr; gap: 4px; }
+  }
+
+  /* Highlights collected */
+  .highlights {
+    margin-top: 22px;
+    padding-top: 22px;
+    border-top: 1px solid var(--card-border);
+  }
+  .highlights h3 {
+    font-family: var(--serif);
+    font-size: 19px;
+    margin: 0 0 6px;
+    font-weight: 600;
+  }
+  .highlights .hl-empty {
+    font-size: 14.5px;
+    color: var(--ink-soft);
+    font-style: italic;
+  }
+  .highlights ul {
+    list-style: none;
+    margin: 14px 0 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .highlights li {
+    border-left: 3px solid var(--hl);
+    padding: 4px 0 4px 14px;
+  }
+  .highlights .hl-quote {
+    font-family: var(--serif);
+    font-size: 16px;
+    line-height: 1.45;
+    color: var(--ink);
+    margin: 0 0 4px;
+  }
+  .highlights .hl-attr {
+    font-size: 12.5px;
+    color: var(--ink-soft);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .highlights .hl-attr .dot {
+    width: 7px; height: 7px; border-radius: 50%;
+  }
+
+  .cta {
+    margin-top: 56px;
+    text-align: center;
+    padding: 36px 24px;
+    border-top: 1px solid var(--rule);
+  }
+  .cta h3 {
+    font-family: var(--serif);
+    font-size: 22px;
+    margin: 0 0 8px;
+    font-weight: 600;
+  }
+  .cta p { color: var(--ink-soft); margin: 0 0 16px; font-size: 15.5px; }
+  .cta a.button {
+    display: inline-block;
+    background: var(--ink);
+    color: var(--bg);
+    padding: 12px 22px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    transition: background .15s ease;
+  }
+  .cta a.button:hover { background: var(--accent); }
+  .cta .small { font-size: 12.5px; color: var(--ink-soft); margin-top: 14px; }
+  .cta .small a { color: var(--ink-soft); }
+
+  /* Source note */
+  .source {
+    margin-top: 36px;
+    font-size: 13px;
+    color: var(--ink-soft);
+    border-top: 1px dashed var(--rule);
+    padding-top: 18px;
+  }
+  .source code {
+    background: var(--card);
+    padding: 1px 6px;
+    border-radius: 4px;
+    border: 1px solid var(--card-border);
+    font-size: 12px;
+  }
+</style>
+</head>
+<body>
+
+<div class="progress">
+  <div class="progress-inner">
+    <span class="progress-pill"><span class="dot-mini picks"></span><span id="picksCount">0</span> of 4 framings picked</span>
+    <span class="progress-pill"><span class="dot-mini hls"></span><span id="hlCount">0</span> highlighted</span>
+    <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+    <span class="reset-link"><a href="#" id="resetLink">reset</a></span>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <p class="eyebrow" id="top">Reader interactive · panel responses</p>
+  <h1 class="title">How three educators are actually learning AI</h1>
+  <p class="subtitle">Four questions from a panel on AI in education. Three working answers from a faculty developer, an instructional designer, and an 8th grade math teacher. Pick whose framing resonates with you on each one.</p>
+
+  <div class="panelists" aria-label="Panelists">
+    <div class="panelist">
+      <span class="dot akesha"></span>
+      <div>
+        <div class="name">Akesha Horton, PhD</div>
+        <div class="role">Director of Academic Engagement and Learning, Indiana University Bloomington</div>
+      </div>
+    </div>
+    <div class="panelist">
+      <span class="dot yousuf"></span>
+      <div>
+        <div class="name">Yousuf Marvi</div>
+        <div class="role">Math Teacher and ELD Coach, Sierra Vista Middle School (Irvine USD)</div>
+      </div>
+    </div>
+    <div class="panelist">
+      <span class="dot anne"></span>
+      <div>
+        <div class="name">Anne Fensie, PhD</div>
+        <div class="role">Director, Center for Teaching and Learning, University of Maine at Presque Isle</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="howto">
+    <strong>Two ways to read.</strong> Same four questions to all three panelists. Pick the framing on each question that lines up with how you think about your own work — and click any individual sentence to highlight the lines that stick. At the end, you'll see your pattern alongside every line you marked.
+    <div class="legend">
+      <span><span class="swatch pick"></span>Pick a framing per question</span>
+      <span><span class="swatch hl"></span>Click any sentence to highlight it</span>
+    </div>
+  </div>
+
+  <!-- Q1 -->
+  <section class="qblock" data-q="q1">
+    <p class="q-num">Question 01</p>
+    <h2 class="q-title">What is your why of AI in your work?</h2>
+    <p class="q-context">The opening question. The moderator noticed that none of the three led with personal efficiency, which is the answer she usually hears. Each landed somewhere different.</p>
+    <div class="cards">
+
+      <div class="card" data-pick="akesha">
+        <div class="card-head">
+          <span class="dot akesha"></span>
+          <div>
+            <div class="who">Akesha</div>
+            <div class="role">Faculty designer in the seat</div>
+          </div>
+        </div>
+        <p class="pull markable">"AI puts educators in the design seat, instead of waiting for someone else's tool to fit our context."</p>
+        <p class="body markable">Working with Punya Mishra taught her that there is no such thing as educational technology. Every tool was designed to make a profit. PowerPoint, Canvas, all of it. AI lowers the cost barrier so educators can build the tools their classrooms actually need, instead of bending borrowed ones.</p>
+        <div class="vote">
+          <button class="vote-button" type="button">
+            <span class="check">✓</span>
+            <span class="label">This is closest to my why</span>
+          </button>
+          <div class="vote-meta"></div>
+        </div>
+      </div>
+
+      <div class="card" data-pick="yousuf">
+        <div class="card-head">
+          <span class="dot yousuf"></span>
+          <div>
+            <div class="who">Yousuf</div>
+            <div class="role">Every child, every day</div>
+          </div>
+        </div>
+        <p class="pull markable">"My students are my why. When AI came about, I saw multimodality."</p>
+        <p class="body markable">As a math teacher of English language learners, he could not always tell what his students were doing in transformations or dilations through text alone. AI changed what formative assessment can look like. The orientation is to every single student, not to his own workload.</p>
+        <div class="vote">
+          <button class="vote-button" type="button">
+            <span class="check">✓</span>
+            <span class="label">This is closest to my why</span>
+          </button>
+          <div class="vote-meta"></div>
+        </div>
+      </div>
+
+      <div class="card" data-pick="anne">
+        <div class="card-head">
+          <span class="dot anne"></span>
+          <div>
+            <div class="who">Anne</div>
+            <div class="role">Help, not hinder, learning</div>
+          </div>
+        </div>
+        <p class="pull markable">"My why is to figure out the potential here. But I also want to know where the dangers are."</p>
+        <p class="body markable">When ChatGPT launched, she dug in instead of banning. She wrote a chapter on using AI to help, not hinder, learning. The driving question is one she came to from teaching: where do students need productive struggle, and what can they offload?</p>
+        <div class="vote">
+          <button class="vote-button" type="button">
+            <span class="check">✓</span>
+            <span class="label">This is closest to my why</span>
+          </button>
+          <div class="vote-meta"></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Q2 -->
+  <section class="qblock" data-q="q2">
+    <p class="q-num">Question 02</p>
+    <h2 class="q-title">How do you preserve friction when AI is designed to remove it?</h2>
+    <p class="q-context">A follow-up the moderator built in real time. AI fluency is complex. So is the question of what students need to keep struggling with even when the tool would happily struggle for them.</p>
+    <div class="cards">
+
+      <div class="card" data-pick="akesha">
+        <div class="card-head">
+          <span class="dot akesha"></span>
+          <div>
+            <div class="who">Akesha</div>
+            <div class="role">Failure as the teacher</div>
+          </div>
+        </div>
+        <p class="pull markable">"When AI fails, students realize they need a human in the loop. That's where the friction lives."</p>
+        <p class="body markable">She does not try to put friction back into AI. She watches for the moments AI breaks down and uses those as the teaching surface. The job, when working with faculty, is to make sure the design does not erase the struggle students need to grow.</p>
+        <div class="vote">
+          <button class="vote-button" type="button">
+            <span class="check">✓</span>
+            <span class="label">This frames it the way I do</span>
+          </button>
+          <div class="vote-meta"></div>
+        </div>
+      </div>
+
+      <div class="card" data-pick="yousuf">
+        <div class="card-head">
+          <span class="dot yousuf"></span>
+          <div>
+            <div class="who">Yousuf</div>
+            <div class="role">Effort over output</div>
+          </div>
+        </div>
+        <p class="pull markable">"If your effort over output ratio is close to one, learning is happening."</p>
+        <p class="body markable">AI is designed not to have friction. The educator's job is to bring it back. He uses a working ratio. Effort divided by output. Close to one means students are doing the cognitive work. Far off in either direction means there is a problem on either side of the tool.</p>
+        <div class="vote">
+          <button class="vote-button" type="button">
+            <span class="check">✓</span>
+            <span class="label">This frames it the way I do</span>
+          </button>
+          <div class="vote-meta"></div>
+        </div>
+      </div>
+
+      <div class="card" data-pick="anne">
+        <div class="card-head">
+          <span class="dot anne"></span>
+          <div>
+            <div class="who">Anne</div>
+            <div class="role">Memory as residue</div>
+          </div>
+        </div>
+        <p class="pull markable">"Memory is the residue of thought. We don't absorb. We think, and that's what we remember."</p>
+        <p class="body markable">She borrows Daniel Willingham's line as the test. The question is not whether AI is in the room. The question is whether students are still doing the thinking. If AI is helping them think more deeply about content, fine. If it is replacing the thinking, the residue is gone.</p>
+        <div class="vote">
+          <button class="vote-button" type="button">
+            <span class="check">✓</span>
+            <span class="label">This frames it the way I do</span>
+          </button>
+          <div class="vote-meta"></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Q3 -->
+  <section class="qblock" data-q="q3">
+    <p class="q-num">Question 03</p>
+    <h2 class="q-title">How are you actually learning to use AI?</h2>
+    <p class="q-context">This was the practical turn in the panel. Habits, routines, what actually moves the needle. None of the three landed on traditional professional development as the answer.</p>
+    <div class="cards">
+
+      <div class="card" data-pick="akesha">
+        <div class="card-head">
+          <span class="dot akesha"></span>
+          <div>
+            <div class="who">Akesha</div>
+            <div class="role">Project-based, peer-based</div>
+          </div>
+        </div>
+        <p class="pull markable">"I've made about 30 apps in two months. The learning is in asking other people."</p>
+        <p class="body markable">She has taken courses and certificates, and found most weren't built for educators. The shift was to project-based learning. Build something real. Then ask other people which tool, what it costs, what you give up in privacy. The peer network is the curriculum.</p>
+        <div class="vote">
+          <button class="vote-button" type="button">
+            <span class="check">✓</span>
+            <span class="label">This describes how I learn</span>
+          </button>
+          <div class="vote-meta"></div>
+        </div>
+      </div>
+
+      <div class="card" data-pick="yousuf">
+        <div class="card-head">
+          <span class="dot yousuf"></span>
+          <div>
+            <div class="who">Yousuf</div>
+            <div class="role">Structured PLC plus near-peer</div>
+          </div>
+        </div>
+        <p class="pull markable">"Paid, opt-in, with a teacher on special assignment as facilitator. Both the structure and the near-peer matter."</p>
+        <p class="body markable">Irvine Unified runs an AI Pioneers PLC. Five times a year. Structured peer collaboration plus a thought partner who is one step ahead. He credits both. The structure makes the time exist. The near-peer makes the learning specific.</p>
+        <div class="vote">
+          <button class="vote-button" type="button">
+            <span class="check">✓</span>
+            <span class="label">This describes how I learn</span>
+          </button>
+          <div class="vote-meta"></div>
+        </div>
+      </div>
+
+      <div class="card" data-pick="anne">
+        <div class="card-head">
+          <span class="dot anne"></span>
+          <div>
+            <div class="who">Anne</div>
+            <div class="role">Self-set challenges</div>
+          </div>
+        </div>
+        <p class="pull markable">"I didn't sign up for classes. I set myself challenges and tried to break things, safely."</p>
+        <p class="body markable">She skipped the formal courses on the theory that there are no settled best practices to teach yet. Her version of learning is annotating chatbot conversations, writing chapters, breaking platforms in low-stakes places, and leaning hard on cross-institution peer networks.</p>
+        <div class="vote">
+          <button class="vote-button" type="button">
+            <span class="check">✓</span>
+            <span class="label">This describes how I learn</span>
+          </button>
+          <div class="vote-meta"></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Q4 -->
+  <section class="qblock" data-q="q4">
+    <p class="q-num">Question 04</p>
+    <h2 class="q-title">How has your thinking on opportunities and risks evolved?</h2>
+    <p class="q-context">The hardest question, in some ways. Not what you think now, but what you used to think and don't anymore. Each panelist named a specific shift.</p>
+    <div class="cards">
+
+      <div class="card" data-pick="akesha">
+        <div class="card-head">
+          <span class="dot akesha"></span>
+          <div>
+            <div class="who">Akesha</div>
+            <div class="role">Sociotechnical lens</div>
+          </div>
+        </div>
+        <p class="pull markable">"When someone benefits from a technology, someone else is usually being disenfranchised by the same one."</p>
+        <p class="body markable">Working alongside an informatics department changed her frame. Reading Safiya Noble and Ruha Benjamin made the questions about each tool sharper. Tokens, privacy layers, environmental cost, who pays. Her stance became: never jump in. Understand what you want to do first.</p>
+        <div class="vote">
+          <button class="vote-button" type="button">
+            <span class="check">✓</span>
+            <span class="label">This is the shift I'm making</span>
+          </button>
+          <div class="vote-meta"></div>
+        </div>
+      </div>
+
+      <div class="card" data-pick="yousuf">
+        <div class="card-head">
+          <span class="dot yousuf"></span>
+          <div>
+            <div class="who">Yousuf</div>
+            <div class="role">Not every teacher needs AI</div>
+          </div>
+        </div>
+        <p class="pull markable">"It took me three years to come to this point: not every teacher needs to use AI."</p>
+        <p class="body markable">His evolution was past evangelism. Most opposition to AI in schools is opposition to ChatGPT specifically. The question for educators is whether they have a problem of practice that AI is part of the answer to. If they don't, the answer is not to push the tool. It is to ask a better question.</p>
+        <div class="vote">
+          <button class="vote-button" type="button">
+            <span class="check">✓</span>
+            <span class="label">This is the shift I'm making</span>
+          </button>
+          <div class="vote-meta"></div>
+        </div>
+      </div>
+
+      <div class="card" data-pick="anne">
+        <div class="card-head">
+          <span class="dot anne"></span>
+          <div>
+            <div class="who">Anne</div>
+            <div class="role">Always start with the lowest tier</div>
+          </div>
+        </div>
+        <p class="pull markable">"I will never use AI to create video. The energy use is exponential as the video gets longer."</p>
+        <p class="body markable">She found what-uses-more.com, which compares the energy use of AI tasks against familiar baselines. The shift was technical and ethical at once. Now she always starts with the simplest, lowest-tier tool and only goes deeper if she needs to. The tools are not going anywhere. The question is how to use them responsibly.</p>
+        <div class="vote">
+          <button class="vote-button" type="button">
+            <span class="check">✓</span>
+            <span class="label">This is the shift I'm making</span>
+          </button>
+          <div class="vote-meta"></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Summary -->
+  <section class="summary" id="summary" hidden>
+    <h2>Your pattern</h2>
+    <p id="patternText">You picked across the panel. That's its own answer.</p>
+    <div class="tally" id="tally"></div>
+
+    <div class="philosophy" id="philosophyBox">
+      <p class="archetype-label">Your working philosophy on teaching with AI</p>
+      <h3 class="archetype" id="archetype"></h3>
+      <p class="stance" id="stanceLine"></p>
+      <ul class="insights" id="insightsList"></ul>
+      <p style="font-size:14.5px;color:var(--ink-soft);margin:0;" id="highlightLean"></p>
+    </div>
+
+    <div class="highlights" id="highlightsBox">
+      <h3>What stuck with you</h3>
+      <p class="hl-empty" id="hlEmpty">No sentences highlighted yet. Click any sentence in a response to mark it.</p>
+      <ul id="hlList" hidden></ul>
+    </div>
+  </section>
+
+  <!-- Continue in the Workbook -->
+  <div class="cta" id="workbookCta">
+    <p class="eyebrow" style="margin-bottom:6px;">Take it further</p>
+    <h3>Continue in the Teaching, Learning &amp; AI Workbook</h3>
+    <p style="max-width:640px;margin:0 auto 16px;">This page is a fast read — four questions, three working answers, your picks. The workbook is the long version of the same conversation: an hour of guided writing through six tensions, three pathways, and a one-sentence working stance you sign and revisit. Same panelists. Same questions. More room to write.</p>
+    <a class="button" href="Teaching Learning and AI.html">Open the Workbook →</a>
+    <div class="small">Your picks and highlights here stay on this page. The workbook keeps its own private copy of your writing.</div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta">
+    <h3>More like this, in your inbox</h3>
+    <p>Spilled and Studied is a Substack on instructional design, AI in education, and what's actually changing in how people learn.</p>
+    <a class="button" href="https://akesha.substack.com" target="_blank" rel="noopener">Subscribe at akesha.substack.com</a>
+    <div class="small">Quotes lightly edited from a panel discussion on educator learning about AI.</div>
+  </div>
+
+  <div class="source">
+    <strong>For the curious.</strong> This page records your picks and highlights in your browser. To aggregate votes across readers, replace the placeholder endpoint at the top of the script (<code>VOTE_ENDPOINT</code>) with a real one (Formspree, Tally, a function on your domain, etc.). The payload shape is documented inline.
+  </div>
+
+</div>
+
+<script>
+  // ---------- Configuration ----------
+  // To enable real aggregation: set VOTE_ENDPOINT to a URL that accepts POST { question, pick, ts }
+  // Until then, picks save to localStorage on the reader's device only.
+  const VOTE_ENDPOINT = ""; // e.g. "https://your-form.example.com/votes"
+  const STORAGE_KEY = "panel_pick_a_framing_v2";
+
+  // ---------- State ----------
+  // picks:      { q1: "akesha", ... }
+  // highlights: { "q1.akesha.pull.0": true, "q1.akesha.body.2": true, ... }
+  const state = loadState();
+
+  function loadState() {
+    try {
+      const raw = localStorage.getItem(STORAGE_KEY);
+      if (!raw) return { picks: {}, highlights: {}, ts: Date.now() };
+      const parsed = JSON.parse(raw);
+      return {
+        picks: (parsed && parsed.picks) || {},
+        highlights: (parsed && parsed.highlights) || {},
+        ts: (parsed && parsed.ts) || Date.now()
+      };
+    } catch (e) { return { picks: {}, highlights: {}, ts: Date.now() }; }
+  }
+  function saveState() {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch (e) {}
+  }
+
+  // ---------- Sentence splitter ----------
+  // Splits a paragraph into sentence spans we can click. Keeps quotation marks
+  // and trailing punctuation attached to the right sentence.
+  function splitSentences(text) {
+    // Match each sentence including its trailing terminator and any trailing quote.
+    const re = /[^.!?]+[.!?]+["”’"']?\s*|[^.!?]+$/g;
+    const parts = text.match(re);
+    return parts ? parts.map(s => s).filter(s => s.trim().length > 0) : [text];
+  }
+
+  function makeMarkable(p, qid, panelistId, kind) {
+    const text = p.textContent;
+    const sentences = splitSentences(text);
+    p.innerHTML = "";
+    sentences.forEach((s, i) => {
+      const span = document.createElement("span");
+      span.className = "sent";
+      span.textContent = s;
+      span.dataset.key = `${qid}.${panelistId}.${kind}.${i}`;
+      span.dataset.q = qid;
+      span.dataset.panelist = panelistId;
+      span.dataset.kind = kind;
+      span.dataset.idx = String(i);
+      if (state.highlights[span.dataset.key]) span.classList.add("lit");
+      span.addEventListener("click", (e) => {
+        e.stopPropagation();
+        toggleHighlight(span);
+      });
+      p.appendChild(span);
+    });
+  }
+
+  function toggleHighlight(span) {
+    const key = span.dataset.key;
+    if (state.highlights[key]) {
+      delete state.highlights[key];
+      span.classList.remove("lit");
+    } else {
+      state.highlights[key] = true;
+      span.classList.add("lit");
+    }
+    saveState();
+    updateProgress();
+    if (!document.getElementById("summary").hidden) renderHighlights();
+  }
+
+  // ---------- Wiring ----------
+  document.querySelectorAll(".qblock").forEach(block => {
+    const qid = block.dataset.q;
+    block.querySelectorAll(".card").forEach(card => {
+      const pick = card.dataset.pick;
+      const button = card.querySelector(".vote-button");
+      const meta = card.querySelector(".vote-meta");
+      const pull = card.querySelector(".pull.markable");
+      const body = card.querySelector(".body.markable");
+      if (pull) makeMarkable(pull, qid, pick, "pull");
+      if (body) makeMarkable(body, qid, pick, "body");
+
+      // Restore prior pick
+      if (state.picks[qid] === pick) {
+        markPicked(block, card);
+        meta.textContent = "Saved on this device.";
+      }
+      button.addEventListener("click", () => {
+        if (state.picks[qid] === pick) {
+          // Toggle off
+          delete state.picks[qid];
+          unmarkAll(block);
+          meta.textContent = "";
+        } else {
+          state.picks[qid] = pick;
+          unmarkAll(block);
+          markPicked(block, card);
+          meta.textContent = "Saved on this device.";
+          submitVote(qid, pick);
+        }
+        saveState();
+        updateProgress();
+      });
+    });
+  });
+
+  function markPicked(block, card) {
+    card.classList.add("picked");
+    card.querySelector(".vote-button").classList.add("picked");
+    const label = card.querySelector(".vote-button .label");
+    if (label) label.textContent = "Your pick";
+  }
+  function unmarkAll(block) {
+    block.querySelectorAll(".card").forEach(c => {
+      c.classList.remove("picked");
+      const b = c.querySelector(".vote-button");
+      b.classList.remove("picked");
+      const lbl = b.querySelector(".label");
+      const qid = block.dataset.q;
+      if (lbl) lbl.textContent = defaultLabelFor(qid);
+    });
+  }
+  function defaultLabelFor(qid) {
+    return ({
+      q1: "This is closest to my why",
+      q2: "This frames it the way I do",
+      q3: "This describes how I learn",
+      q4: "This is the shift I'm making"
+    })[qid] || "Pick this framing";
+  }
+
+  // ---------- Submission ----------
+  function submitVote(question, pick) {
+    if (!VOTE_ENDPOINT) return;
+    try {
+      fetch(VOTE_ENDPOINT, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ question, pick, ts: Date.now() })
+      }).catch(() => {});
+    } catch (e) {}
+  }
+
+  // ---------- Progress + Summary ----------
+  function updateProgress() {
+    const total = 4;
+    const count = Object.keys(state.picks).length;
+    const hlCount = Object.keys(state.highlights).length;
+    document.getElementById("picksCount").textContent = count;
+    document.getElementById("hlCount").textContent = hlCount;
+    document.getElementById("progressFill").style.width = (count / total * 100) + "%";
+    if (count === total) {
+      renderSummary();
+      const s = document.getElementById("summary");
+      const wasHidden = s.hidden;
+      s.hidden = false;
+      if (wasHidden) s.scrollIntoView({ behavior: "smooth", block: "start" });
+    } else {
+      document.getElementById("summary").hidden = true;
+    }
+  }
+
+  // Per-question, per-panelist insight matrix.
+  // Each cell is a one-sentence read of what picking that framing on that question suggests.
+  const INSIGHTS = {
+    q1: {
+      akesha: "You see AI's value in restoring <strong>educator authorship</strong> over the tools your classroom uses.",
+      yousuf: "Your starting point is <strong>specific students</strong>. AI matters to the degree it lets particular learners be seen.",
+      anne:   "You're motivated by <strong>inquiry</strong> — cataloging what AI can responsibly do alongside where the dangers are."
+    },
+    q2: {
+      akesha: "You treat AI's <strong>failures</strong> as the teaching surface — you don't add friction, you watch for where it breaks.",
+      yousuf: "You think in <strong>ratios</strong>. Effort over output. Your job is making sure students keep doing the cognitive work.",
+      anne:   "You're a <strong>cognitive gatekeeper</strong>. The test is whether students are still thinking, because thinking is what they remember."
+    },
+    q3: {
+      akesha: "You <strong>build to learn</strong> — make something real, then ask peers what you traded away. Your curriculum is the network.",
+      yousuf: "You trust <strong>structure and proximity</strong> — scheduled time, opt-in, with a near-peer who's a step ahead.",
+      anne:   "You set your own challenges and <strong>break things deliberately</strong>, skeptical there are settled best practices to teach yet."
+    },
+    q4: {
+      akesha: "You've added a <strong>sociotechnical lens</strong> — for every beneficiary, you ask who's being disenfranchised.",
+      yousuf: "You've moved <strong>past evangelism</strong>. AI is part of an answer, not the answer. Some teachers don't need it.",
+      anne:   "You've become <strong>resource-conscious</strong> — start with the lowest-tier tool, only escalate if needed."
+    }
+  };
+
+  // Archetype copy for each dominant pattern.
+  const ARCHETYPES = {
+    akesha: {
+      title: "The <em>Designer</em> in the Seat",
+      stance: "You see AI as institutional infrastructure work. Your philosophy centers educator agency over tool selection — and the willingness to interrogate the stack you're standing on."
+    },
+    yousuf: {
+      title: "The <em>Student-First</em> Pragmatist",
+      stance: "You see AI through the eyes of specific learners. Your philosophy starts with the kid in front of you and works backward to the tool — never the other way around."
+    },
+    anne: {
+      title: "The <em>Cognitive</em> Steward",
+      stance: "You guard the thinking. AI is welcome only where it preserves productive struggle, and only at the lowest tier of intervention that does the job."
+    }
+  };
+
+  const Q_LABELS = {
+    q1: "Q1 · Why",
+    q2: "Q2 · Friction",
+    q3: "Q3 · Learning",
+    q4: "Q4 · Evolving"
+  };
+
+  function renderSummary() {
+    const counts = { akesha: 0, yousuf: 0, anne: 0 };
+    Object.values(state.picks).forEach(p => { if (counts[p] !== undefined) counts[p]++; });
+    const total = Object.keys(state.picks).length || 1;
+    const names = {
+      akesha: { full: "Akesha", dot: "akesha" },
+      yousuf: { full: "Yousuf", dot: "yousuf" },
+      anne:   { full: "Anne",   dot: "anne" }
+    };
+    const tally = document.getElementById("tally");
+    tally.innerHTML = "";
+    ["akesha", "yousuf", "anne"].forEach(k => {
+      const cell = document.createElement("div");
+      cell.className = "tally-cell";
+      const share = Math.round(counts[k] / total * 100);
+      cell.innerHTML = `
+        <div class="tally-name"><span class="dot ${names[k].dot}" style="display:inline-block;width:10px;height:10px;border-radius:50%"></span>${names[k].full}</div>
+        <div class="tally-count">${counts[k]}<span style="font-size:14px;color:var(--ink-soft); font-family: var(--sans); margin-left:6px;">of 4</span></div>
+        <div class="tally-share">${share}%</div>
+      `;
+      tally.appendChild(cell);
+    });
+
+    // Pattern text + archetype synthesis
+    const max = Math.max(counts.akesha, counts.yousuf, counts.anne);
+    const winners = Object.keys(counts).filter(k => counts[k] === max);
+    let patternText, archetypeTitle, stanceLine;
+
+    if (winners.length === 1 && counts[winners[0]] === 4) {
+      const w = winners[0];
+      patternText = `Across all four questions, ${names[w].full}'s framing is closest to yours. That's a clear working stance.`;
+      archetypeTitle = ARCHETYPES[w].title;
+      stanceLine = ARCHETYPES[w].stance;
+    } else if (winners.length === 1 && counts[winners[0]] >= 2) {
+      const w = winners[0];
+      const others = ["akesha", "yousuf", "anne"].filter(k => k !== w && counts[k] > 0);
+      patternText = `${names[w].full}'s framing showed up most often (${counts[w]} of 4). The remaining questions pulled you toward ${others.map(o => names[o].full).join(" and ")}.`;
+      archetypeTitle = ARCHETYPES[w].title + ", with edges";
+      stanceLine = ARCHETYPES[w].stance + " The questions where you broke from this pattern are the ones worth sitting with — they're where your stance is still negotiating with itself.";
+    } else if (winners.length === 3) {
+      patternText = `You split evenly across the three panelists. The four questions are pulling on different parts of your thinking.`;
+      archetypeTitle = "The <em>Contextual</em> Practitioner";
+      stanceLine = "Your philosophy is genuinely situational. You don't have one north star for AI — you have four different ones, and each question of practice gets evaluated on its own terms. That's not indecision; that's a kind of discipline.";
+    } else {
+      // Two-way tie or 2+1+1
+      const sorted = Object.keys(counts).sort((a, b) => counts[b] - counts[a]);
+      const top = sorted[0], second = sorted[1];
+      patternText = `Your stance is a hybrid — ${names[top].full} and ${names[second].full}'s framings both showed up.`;
+      archetypeTitle = `Hybrid: <em>${names[top].full}</em> &amp; <em>${names[second].full}</em>`;
+      stanceLine = `${ARCHETYPES[top].stance.replace(/\.$/, "")} — but you also share ${names[second].full}'s instinct, which means your practice probably moves between these two registers depending on what's in front of you.`;
+    }
+
+    document.getElementById("patternText").textContent = patternText;
+    document.getElementById("archetype").innerHTML = archetypeTitle;
+    document.getElementById("stanceLine").textContent = stanceLine;
+
+    // Per-question insights
+    const list = document.getElementById("insightsList");
+    list.innerHTML = "";
+    ["q1", "q2", "q3", "q4"].forEach(q => {
+      const pick = state.picks[q];
+      if (!pick) return;
+      const li = document.createElement("li");
+      li.innerHTML = `
+        <div class="insight-q"><span class="dot ${pick}"></span>${Q_LABELS[q]}</div>
+        <div class="insight-text">${INSIGHTS[q][pick]}</div>
+      `;
+      list.appendChild(li);
+    });
+
+    // Highlight lean — does what they marked match what they picked?
+    const hlLean = document.getElementById("highlightLean");
+    const hlByPanelist = { akesha: 0, yousuf: 0, anne: 0 };
+    Object.keys(state.highlights).forEach(k => {
+      const parts = k.split(".");
+      if (hlByPanelist[parts[1]] !== undefined) hlByPanelist[parts[1]]++;
+    });
+    const hlTotal = hlByPanelist.akesha + hlByPanelist.yousuf + hlByPanelist.anne;
+    if (hlTotal === 0) {
+      hlLean.textContent = "";
+    } else {
+      const hlSorted = Object.keys(hlByPanelist).sort((a, b) => hlByPanelist[b] - hlByPanelist[a]);
+      const hlTop = hlSorted[0];
+      const pickTop = winners.length === 1 ? winners[0] : null;
+      if (pickTop && pickTop === hlTop) {
+        hlLean.innerHTML = `<strong>Your highlights agree with your picks.</strong> Most of the lines you marked came from ${names[hlTop].full} — the same voice your framings keep returning to.`;
+      } else if (pickTop && hlByPanelist[hlTop] > 0 && pickTop !== hlTop) {
+        hlLean.innerHTML = `<strong>An interesting tension.</strong> You picked ${names[pickTop].full}'s framing most often, but the lines you actually highlighted lean toward ${names[hlTop].full}. The framings you'd defend in a meeting and the language that quietly stuck with you may be slightly out of step.`;
+      } else {
+        hlLean.innerHTML = `Your highlights span the panel — across ${hlTotal} marked sentence${hlTotal === 1 ? "" : "s"}, you collected language from more than one voice.`;
+      }
+    }
+
+    renderHighlights();
+  }
+
+  function renderHighlights() {
+    const list = document.getElementById("hlList");
+    const empty = document.getElementById("hlEmpty");
+    const keys = Object.keys(state.highlights);
+    if (keys.length === 0) {
+      list.hidden = true;
+      empty.hidden = false;
+      return;
+    }
+    empty.hidden = true;
+    list.hidden = false;
+    list.innerHTML = "";
+
+    // Order them by question, then by panelist (akesha, yousuf, anne), then sentence.
+    const panelistOrder = { akesha: 0, yousuf: 1, anne: 2 };
+    const kindOrder = { pull: 0, body: 1 };
+    const items = keys.map(k => {
+      const [q, panelist, kind, idx] = k.split(".");
+      const span = document.querySelector(`.sent[data-key="${k}"]`);
+      const text = span ? span.textContent.trim() : "";
+      const qLabel = (
+        document.querySelector(`.qblock[data-q="${q}"] .q-title`)?.textContent || ""
+      );
+      return { k, q, panelist, kind, idx: parseInt(idx, 10), text, qLabel };
+    }).filter(x => x.text);
+
+    items.sort((a, b) =>
+      a.q.localeCompare(b.q) ||
+      (panelistOrder[a.panelist] - panelistOrder[b.panelist]) ||
+      (kindOrder[a.kind] - kindOrder[b.kind]) ||
+      (a.idx - b.idx)
+    );
+
+    const panelistDisplay = { akesha: "Akesha", yousuf: "Yousuf", anne: "Anne" };
+    items.forEach(item => {
+      const li = document.createElement("li");
+      li.innerHTML = `
+        <div class="hl-quote">${escapeHtml(item.text)}</div>
+        <div class="hl-attr">
+          <span class="dot ${item.panelist}"></span>
+          ${panelistDisplay[item.panelist]} · ${escapeHtml(item.qLabel)}
+        </div>
+      `;
+      list.appendChild(li);
+    });
+  }
+
+  function escapeHtml(s) {
+    return String(s)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#39;");
+  }
+
+  // ---------- Reset ----------
+  document.getElementById("resetLink").addEventListener("click", (e) => {
+    e.preventDefault();
+    if (!confirm("Clear your picks and highlights and start over?")) return;
+    state.picks = {};
+    state.highlights = {};
+    saveState();
+    document.querySelectorAll(".card").forEach(c => c.classList.remove("picked"));
+    document.querySelectorAll(".vote-button").forEach(b => {
+      b.classList.remove("picked");
+      const lbl = b.querySelector(".label");
+      const qid = b.closest(".qblock")?.dataset.q;
+      if (lbl) lbl.textContent = defaultLabelFor(qid);
+    });
+    document.querySelectorAll(".vote-meta").forEach(m => m.textContent = "");
+    document.querySelectorAll(".sent.lit").forEach(s => s.classList.remove("lit"));
+    updateProgress();
+  });
+
+  // Init labels for un-picked buttons
+  document.querySelectorAll(".qblock").forEach(block => {
+    const qid = block.dataset.q;
+    block.querySelectorAll(".vote-button").forEach(b => {
+      if (!b.classList.contains("picked")) {
+        const lbl = b.querySelector(".label");
+        if (lbl && !lbl.textContent.trim()) lbl.textContent = defaultLabelFor(qid);
+      }
+    });
+  });
+
+  updateProgress();
+</script>
+
+</body>
+</html>
